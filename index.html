@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024年山西省各市空气质量可视化</title>
+    <script src="https://s4.zstatic.net/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #f7f9fc;
+            --text-color: #2c3e50;
+        }
+        body {
+            font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        .header-bar {
+            width: 98%;
+            max-width: 1600px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            background: #fff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            box-sizing: border-box;
+        }
+        .page-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--text-color);
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+        .controls {
+            display: flex;
+            background: var(--bg-color);
+            padding: 4px;
+            border-radius: 6px;
+            border: 1px solid #e0e4e8;
+        }
+        .tab-btn {
+            border: none;
+            padding: 8px 28px;
+            font-size: 14px;
+            cursor: pointer;
+            background: transparent;
+            color: #666;
+            transition: all 0.2s ease;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .tab-btn.active {
+            background-color: #fff;
+            color: #2c3e50;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            font-weight: 600;
+        }
+        #chart-container {
+            width: 98%;
+            max-width: 1600px;
+            flex-grow: 1;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            padding: 10px;
+            box-sizing: border-box;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-bar">
+        <h1 class="page-title">2024年山西省各市空气质量可视化</h1>
+        <div class="controls">
+            <button class="tab-btn active" onclick="switchTab('time')">时间</button>
+            <button class="tab-btn" onclick="switchTab('aqi')">AQI</button>
+        </div>
+    </div>
+
+    <div id="chart-container"></div>
+
+    <script>
+        const AQI_LEVELS = [
+            { name: '优', range: '0-50', min: 0, max: 50, color: '#57c5c7' },
+            { name: '良', range: '51-100', min: 51, max: 100, color: '#9adcdb' },
+            { name: '轻度污染', range: '101-150', min: 101, max: 150, color: '#d1d1d1' },
+            { name: '中度污染', range: '151-200', min: 151, max: 200, color: '#a6a6a6' },
+            { name: '重度污染', range: '201-300', min: 201, max: 300, color: '#707070' },
+            { name: '严重污染', range: '>300', min: 301, max: 9999, color: '#3b3b3b' }
+        ];
+
+        const LEGEND_DATA = AQI_LEVELS.map(l => ({ name: l.name }));
+
+        function generate2024Dates() {
+            const dates = [];
+            const start = new Date('2024-01-01');
+            const end = new Date('2024-12-31');
+            for (let dt = start; dt <= end; dt.setDate(dt.getDate() + 1)) {
+                dates.push(new Date(dt).toISOString().slice(0, 10));
+            }
+            return dates;
+        }
+        const allDates = generate2024Dates();
+        const daysInYear = 366;
+
+        let myChart = echarts.init(document.getElementById('chart-container'), null, { renderer: 'svg' });
+        
+        let rawData = {};
+        let currentMode = 'time';
+
+        function getAQIInfo(val) {
+            if (!val && val !== 0) return { index: -1, name: '无数据', color: '#f0f0f0' };
+            for(let i=0; i<AQI_LEVELS.length; i++) {
+                if(val <= AQI_LEVELS[i].max) return { index: i, ...AQI_LEVELS[i] };
+            }
+            return { index: 5, ...AQI_LEVELS[5] };
+        }
+
+        function getOption(data, mode) {
+            const cities = Object.keys(data);
+            
+            let option = {
+                tooltip: {
+                    trigger: 'item',
+                    confine: true,
+                    backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                    textStyle: { color: '#333' },
+                    formatter: (params) => {
+                        if (mode === 'time') {
+                            if (params.seriesType !== 'heatmap') return ''; 
+                            const date = allDates[params.data[0]]; 
+                            const val = params.data[2]; 
+                            const info = getAQIInfo(val);
+                            let colorDot = `<span style="display:inline-block;margin-right:8px;border-radius:3px;width:14px;height:14px;background-color:${info.color};"></span>`;
+                            
+                            return `<div style="font-size:15px;font-weight:bold;color:#333;margin-bottom:8px;">${date}</div>
+                                    <div style="display:flex;align-items:center;line-height:1;">
+                                        ${colorDot} <span style="font-size:14px;">AQI: <b>${val}</b> (${info.name})</span>
+                                    </div>`;
+                        } else {
+                            return `<div style="font-weight:bold;">${params.seriesName}</div>
+                                    <div>${params.marker} 天数: <b>${params.value}</b> 天</div>`;
+                        }
+                    }
+                },
+                legend: {
+                    data: LEGEND_DATA,
+                    top: 0,
+                    itemWidth: 14,
+                    itemHeight: 14,
+                    textStyle: { color: '#555', fontSize: 12 },
+                    formatter: function(name) {
+                        const item = AQI_LEVELS.find(l => l.name === name);
+                        return `${name} [${item.range}]`; 
+                    },
+                    selectedMode: false
+                },
+                grid: { left: '100', right: '40', top: '60', bottom: '40', containLabel: false },
+                
+                yAxis: {
+                    type: 'category',
+                    data: cities,
+                    inverse: true,
+                    axisLabel: { 
+                        fontWeight: 'bold', 
+                        fontSize: 14, 
+                        color: '#333', 
+                        margin: 14,
+                    },
+                    axisLine: { show: true, lineStyle: { color: '#eee' } }, 
+                    axisTick: { show: true, alignWithLabel: false, length: 6, lineStyle: { color: '#ccc' } } 
+                },
+                
+                xAxis: {},
+                series: [],
+                animationDurationUpdate: 600,
+                animationEasingUpdate: 'cubicInOut'
+            };
+
+            if (mode === 'time') {
+                const heatmapData = [];
+                cities.forEach((city, yIndex) => {
+                    if (data[city]) {
+                        data[city].forEach((val, xIndex) => {
+                            heatmapData.push([xIndex, yIndex, val]); 
+                        });
+                    }
+                });
+
+                option.visualMap = {
+                    type: 'piecewise',
+                    pieces: AQI_LEVELS.map(l => ({ min: l.min, max: l.max, label: l.name, color: l.color })),
+                    show: false, 
+                    dimension: 2
+                };
+
+                option.xAxis = {
+                    type: 'category',
+                    data: allDates,
+                    axisTick: { 
+                        show: true, 
+                        alignWithLabel: false,
+                        interval: (index, value) => value.endsWith('-01'),
+                        lineStyle: { color: '#ccc' }
+                    },
+                    axisLine: { show: true, lineStyle: { color: '#eee' } },
+                    splitLine: { show: false },
+                    axisLabel: { 
+                        interval: (index, value) => value.endsWith('-15'),
+                        formatter: (value) => {
+                            const dt = new Date(value);
+                            return (dt.getMonth() + 1) + '月';
+                        },
+                        color: '#666', 
+                        fontSize: 12,
+                        padding: [0, 0, 0, 12] 
+                    }
+                };
+                
+                option.series = [{
+                    name: 'AQI Distribution',
+                    type: 'heatmap',
+                    data: heatmapData,
+                    itemStyle: {
+                        borderColor: '#fff',
+                        borderWidth: 1 
+                    },
+                    label: { show: false },
+                    universalTransition: { enabled: true },
+                }];
+
+                AQI_LEVELS.forEach(level => {
+                    option.series.push({
+                        name: level.name,
+                        type: 'bar',
+                        data: [], 
+                        itemStyle: { color: level.color }
+                    });
+                });
+
+            } 
+            else if (mode === 'aqi') {
+                option.xAxis = {
+                    type: 'value',
+                    max: daysInYear,
+                    axisLabel: { formatter: '{value}', color: '#666' },
+                    splitLine: { show: true, lineStyle: { color: '#f5f5f5' } },
+                    axisTick: { show: true, lineStyle: { color: '#ccc' } },
+                    axisLine: { show: true, lineStyle: { color: '#eee' } }
+                };
+                
+                const series = [];
+                AQI_LEVELS.forEach((level) => {
+                    const seriesData = cities.map(city => {
+                        if (!data[city]) return 0;
+                        return data[city].filter(val => val >= level.min && val <= level.max).length;
+                    });
+
+                    series.push({
+                        name: level.name,
+                        type: 'bar',
+                        stack: 'total',
+                        data: seriesData,
+                        itemStyle: { color: level.color },
+                        label: { show: false },
+                        barWidth: '65%', 
+                        universalTransition: { enabled: true }
+                    });
+                });
+                option.series = series;
+                if(option.visualMap) delete option.visualMap;
+            }
+
+            return option;
+        }
+
+        async function init() {
+            myChart.showLoading({ text: '正在加载...', color: '#57c5c7' });
+            try {
+                const response = await fetch('./aqi-data.json');
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                rawData = await response.json();
+                myChart.hideLoading();
+                render();
+            } catch (error) {
+                console.error(error);
+                myChart.hideLoading();
+                document.getElementById('chart-container').innerHTML = 
+                    `<div style="text-align:center; margin-top:100px; color:#666;">
+                        <h3>无法加载数据</h3><p>请确保已通过本地服务器运行页面</p>
+                    </div>`;
+            }
+        }
+
+        function render() {
+            if (!rawData || Object.keys(rawData).length === 0) return;
+            const option = getOption(rawData, currentMode);
+            myChart.setOption(option, true); 
+        }
+
+        window.switchTab = function(mode) {
+            if (currentMode === mode) return;
+            currentMode = mode;
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            render();
+        }
+
+        window.addEventListener('resize', () => myChart.resize());
+
+        init();
+
+    </script>
+</body>
+</html>

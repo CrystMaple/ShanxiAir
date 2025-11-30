@@ -33,6 +33,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.04);
             box-sizing: border-box;
+            flex-shrink: 0;
         }
         .page-title {
             font-size: 22px;
@@ -65,7 +66,7 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.08);
             font-weight: 600;
         }
-        #chart-container {
+        .chart-wrapper {
             width: 98%;
             max-width: 1600px;
             flex-grow: 1;
@@ -75,6 +76,15 @@
             padding: 10px;
             box-sizing: border-box;
             position: relative;
+            overflow-x: auto;
+            overflow-y: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        #chart-container {
+            min-width: 1000px;
+            flex-grow: 1;
+            height: 100%;
         }
     </style>
 </head>
@@ -88,7 +98,9 @@
         </div>
     </div>
 
-    <div id="chart-container"></div>
+    <div class="chart-wrapper">
+        <div id="chart-container"></div>
+    </div>
 
     <script>
         const AQI_LEVELS = [

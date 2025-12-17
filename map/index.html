@@ -25,8 +25,8 @@
 
     #map-reset {
       position: fixed;
-      top: 16px;
       right: 16px;
+      bottom: 16px;
       z-index: 15;
       display: none;
       align-items: center;
@@ -104,26 +104,23 @@
     #overlay-close:active { transform: translateY(0px) scale(0.98); }
     #overlay-close svg { width: 18px; height: 18px; }
 
-    /* 图表容器：用于处理滚动 */
     #chart-container {
       flex: 1;
       width: 100%;
       position: relative;
-      overflow: hidden; /* 默认隐藏 */
+      overflow: hidden;
     }
-    
-    /* 当需要滚动时添加此累 */
+
     #chart-container.scrollable {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
     }
 
-    #city-chart { 
-      height: 100%; 
-      width: 100%; 
+    #city-chart {
+      height: 100%;
+      width: 100%;
     }
-    
-    /* 强制宽度，确保在移动端有足够空间显示标签 */
+
     #city-chart.wide-chart {
       min-width: 800px;
     }
@@ -272,12 +269,41 @@
       }
     }
 
+    function getTaiyuanResponsiveConfig() {
+      const containerW = chartContainer.clientWidth || window.innerWidth || 360;
+      const containerH = chartContainer.clientHeight || (window.innerHeight ? (window.innerHeight - 70) : 520);
+      const limitW = 420;
+      const padding = 18;
+      const baseTextR = 30;
+      const baseBraceR = 10;
+      const minTextR = 16;
+      const scale = containerW < limitW ? Math.max(0.72, Math.min(1, (containerW - padding * 2) / limitW)) : 1;
+      const textRadius = Math.max(minTextR, baseTextR * scale);
+      const braceExtra = baseBraceR * scale;
+      const outerMax = Math.min(containerW, containerH) / 2 - padding;
+      const requiredOuter = 0.80 * Math.min(containerW, containerH) / 2 + braceExtra + textRadius;
+      const radiusMax = requiredOuter > outerMax ? (outerMax / requiredOuter) * 80 : 80;
+      const radiusMin = Math.max(16, radiusMax * 0.25);
+      const isMobile = containerW < 600;
+      const mainFontSize = Math.round((isMobile ? 16 : 20) * scale);
+      const subFontSize = Math.round((isMobile ? 24 : 36) * scale);
+      const monthFontSize = Math.max(10, Math.round(13 * scale));
+      return {
+        scale,
+        textRadius,
+        braceExtra,
+        polarRadius: [`${Math.round(radiusMin)}%`, `${Math.round(radiusMax)}%`],
+        mainFontSize,
+        subFontSize,
+        monthFontSize
+      };
+    }
+
     async function showTaiyuanCircle() {
       titleEl.innerText = "太原：2024年空气质量";
-      // 太原圆环图不需要横向滚动
       chartContainer.classList.remove("scrollable");
       cityChartEl.classList.remove("wide-chart");
-      
+
       try {
         const resp = await fetch("/data/weather.json", { cache: "no-cache" });
         if (!resp.ok) throw new Error("无法加载 /data/weather.json");
@@ -341,11 +367,8 @@
 
         const totalDays = dates.length;
         const anglePerDay = 360 / totalDays;
-        
-        // 动态调整字体大小
-        const isMobile = window.innerWidth < 600;
-        const mainFontSize = isMobile ? 16 : 20;
-        const subFontSize = isMobile ? 24 : 36;
+
+        const responsive = getTaiyuanResponsiveConfig();
 
         const option = {
           backgroundColor: "#f6f1e1",
@@ -358,8 +381,8 @@
             top: "center",
             textStyle: {
               rich: {
-                main: { fontSize: mainFontSize, color: "#666", padding: [0, 0, 8, 0] },
-                sub: { fontSize: subFontSize, fontWeight: "900", color: "#333" }
+                main: { fontSize: responsive.mainFontSize, color: "#666", padding: [0, 0, 8, 0] },
+                sub: { fontSize: responsive.subFontSize, fontWeight: "900", color: "#333" }
               }
             }
           },
@@ -373,7 +396,7 @@
               return `<b>${o.date}</b><br/>PM2.5：${o.pm25}<br/>平均等级：${meanText}<br/>最大等级：${maxText}`;
             }
           },
-          polar: { radius: ["20%", "80%"] },
+          polar: { radius: responsive.polarRadius },
           angleAxis: {
             type: "category",
             data: dates,
@@ -419,11 +442,11 @@
                 const cy = params.coordSys.cy;
                 const r0 = params.coordSys.r;
 
-                const braceRadius = r0 + 10;
-                const lineLen = 3;
+                const braceRadius = r0 + responsive.braceExtra;
+                const lineLen = 3 * responsive.scale;
                 const innerTick = braceRadius - lineLen;
                 const outerTick = braceRadius + lineLen;
-                const textRadius = braceRadius + 30;
+                const textRadius = braceRadius + responsive.textRadius;
 
                 const mid = (startAngle + endAngle) / 2;
                 const cosMid = Math.cos(-mid);
@@ -442,7 +465,7 @@
                     {
                       type: "arc",
                       shape: { cx, cy, r: braceRadius, startAngle: -endAngle, endAngle: -startAngle, clockwise: false },
-                      style: { stroke: "#555", fill: "none", lineWidth: 1 }
+                      style: { stroke: "#555", fill: "none", lineWidth: Math.max(0.8, 1 * responsive.scale) }
                     },
                     {
                       type: "line",
@@ -452,7 +475,7 @@
                         x2: cx + outerTick * startCos,
                         y2: cy + outerTick * startSin
                       },
-                      style: { stroke: "#555", lineWidth: 1 }
+                      style: { stroke: "#555", lineWidth: Math.max(0.8, 1 * responsive.scale) }
                     },
                     {
                       type: "line",
@@ -462,14 +485,14 @@
                         x2: cx + outerTick * endCos,
                         y2: cy + outerTick * endSin
                       },
-                      style: { stroke: "#555", lineWidth: 1 }
+                      style: { stroke: "#555", lineWidth: Math.max(0.8, 1 * responsive.scale) }
                     },
                     {
                       type: "text",
                       style: {
                         text: item.name,
                         fill: "#333",
-                        font: "bold 13px Microsoft YaHei",
+                        font: `bold ${responsive.monthFontSize}px Microsoft YaHei`,
                         textAlign: "center",
                         textVerticalAlign: "middle"
                       },
@@ -483,7 +506,7 @@
         };
 
         cityChart.setOption(option, true);
-        setTimeout(() => cityChart.resize(), 100);
+        setTimeout(() => cityChart.resize(), 80);
       } catch (e) {
         console.error(e);
         titleEl.innerText = "太原：加载数据失败";
@@ -498,7 +521,6 @@
         return;
       }
 
-      // 启用横向滚动
       chartContainer.classList.add("scrollable");
       cityChartEl.classList.add("wide-chart");
       cityChart.resize();
@@ -522,9 +544,8 @@
           type: "category",
           data: allDates,
           axisLabel: {
-            // 关键修改：仅显示每月1号，确保稀疏度
             interval: (idx, val) => val.endsWith("-01"),
-            hideOverlap: true, // 防止重叠
+            hideOverlap: true,
             formatter: value => {
               const d = new Date(value);
               return (d.getMonth() + 1) + "月";
@@ -768,7 +789,7 @@
     function openOverlay() {
       overlayEl.style.display = "flex";
       recreateCityChart();
-      if(cityChart) cityChart.resize();
+      if (cityChart) cityChart.resize();
     }
 
     function closeOverlay() {
@@ -816,10 +837,7 @@
 
       if (inShanxiView && params.seriesType === "scatter") {
         const cityName = params.name;
-        
-        // 关键修复：点击城市时，强制隐藏地图上的 tooltip，防止其遮挡新弹窗
-        mapChart.dispatchAction({ type: 'hideTip' });
-        
+        mapChart.dispatchAction({ type: "hideTip" });
         openOverlay();
         if (cityName === "太原") showTaiyuanCircle();
         else showCityChart(cityName);
@@ -829,7 +847,12 @@
     window.addEventListener("resize", () => {
       mapChart.resize();
       mapChart.setOption({ title: getMapTitleOption() });
-      if (cityChart) cityChart.resize();
+      if (cityChart) {
+        cityChart.resize();
+        if (overlayEl.style.display === "flex" && titleEl.innerText.startsWith("太原：")) {
+          showTaiyuanCircle();
+        }
+      }
     });
 
     (async function init() {

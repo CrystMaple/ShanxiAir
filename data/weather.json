@@ -1,0 +1,3612 @@
+[
+  {
+    "date": "2024-01-01",
+    "month": 1,
+    "day": 1,
+    "pm25": 108.0,
+    "aqi_mean": 139.45833333333334,
+    "aqi_max": 240.0,
+    "level_mean": "Mild",
+    "level_max": "Heavy"
+  },
+  {
+    "date": "2024-01-02",
+    "month": 1,
+    "day": 2,
+    "pm25": 82.0,
+    "aqi_mean": 113.54166666666667,
+    "aqi_max": 234.0,
+    "level_mean": "Mild",
+    "level_max": "Heavy"
+  },
+  {
+    "date": "2024-01-03",
+    "month": 1,
+    "day": 3,
+    "pm25": 35.0,
+    "aqi_mean": 61.458333333333336,
+    "aqi_max": 93.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-01-04",
+    "month": 1,
+    "day": 4,
+    "pm25": 47.0,
+    "aqi_mean": 74.45833333333333,
+    "aqi_max": 96.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-01-05",
+    "month": 1,
+    "day": 5,
+    "pm25": 42.0,
+    "aqi_mean": 74.79166666666667,
+    "aqi_max": 94.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-01-06",
+    "month": 1,
+    "day": 6,
+    "pm25": 20.0,
+    "aqi_mean": 48.041666666666664,
+    "aqi_max": 61.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-01-07",
+    "month": 1,
+    "day": 7,
+    "pm25": 32.0,
+    "aqi_mean": 58.708333333333336,
+    "aqi_max": 80.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-01-08",
+    "month": 1,
+    "day": 8,
+    "pm25": 81.0,
+    "aqi_mean": 111.625,
+    "aqi_max": 173.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-01-09",
+    "month": 1,
+    "day": 9,
+    "pm25": 56.0,
+    "aqi_mean": 80.41666666666667,
+    "aqi_max": 153.0,
+    "level_mean": "Good",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-01-10",
+    "month": 1,
+    "day": 10,
+    "pm25": 60.0,
+    "aqi_mean": 82.91666666666667,
+    "aqi_max": 116.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-01-11",
+    "month": 1,
+    "day": 11,
+    "pm25": 84.0,
+    "aqi_mean": 111.875,
+    "aqi_max": 151.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-01-12",
+    "month": 1,
+    "day": 12,
+    "pm25": 80.0,
+    "aqi_mean": 107.08333333333333,
+    "aqi_max": 151.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-01-13",
+    "month": 1,
+    "day": 13,
+    "pm25": 86.0,
+    "aqi_mean": 114.95833333333333,
+    "aqi_max": 167.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-01-14",
+    "month": 1,
+    "day": 14,
+    "pm25": 22.0,
+    "aqi_mean": 50.708333333333336,
+    "aqi_max": 96.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-01-15",
+    "month": 1,
+    "day": 15,
+    "pm25": 42.0,
+    "aqi_mean": 68.5,
+    "aqi_max": 106.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-01-16",
+    "month": 1,
+    "day": 16,
+    "pm25": 74.0,
+    "aqi_mean": 101.27272727272727,
+    "aqi_max": 150.0,
+    "level_mean": "Mild",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-01-17",
+    "month": 1,
+    "day": 17,
+    "pm25": 204.0,
+    "aqi_mean": 253.33333333333334,
+    "aqi_max": 289.0,
+    "level_mean": "Heavy",
+    "level_max": "Heavy"
+  },
+  {
+    "date": "2024-01-18",
+    "month": 1,
+    "day": 18,
+    "pm25": 126.0,
+    "aqi_mean": 167.58333333333334,
+    "aqi_max": 249.0,
+    "level_mean": "Moderate",
+    "level_max": "Heavy"
+  },
+  {
+    "date": "2024-01-19",
+    "month": 1,
+    "day": 19,
+    "pm25": 63.0,
+    "aqi_mean": 85.125,
+    "aqi_max": 111.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-01-20",
+    "month": 1,
+    "day": 20,
+    "pm25": 62.0,
+    "aqi_mean": 87.91666666666667,
+    "aqi_max": 199.0,
+    "level_mean": "Good",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-01-21",
+    "month": 1,
+    "day": 21,
+    "pm25": 12.0,
+    "aqi_mean": 24.0,
+    "aqi_max": 34.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-01-22",
+    "month": 1,
+    "day": 22,
+    "pm25": 16.0,
+    "aqi_mean": 28.125,
+    "aqi_max": 43.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-01-23",
+    "month": 1,
+    "day": 23,
+    "pm25": 24.0,
+    "aqi_mean": 43.458333333333336,
+    "aqi_max": 66.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-01-24",
+    "month": 1,
+    "day": 24,
+    "pm25": 40.0,
+    "aqi_mean": 61.791666666666664,
+    "aqi_max": 93.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-01-25",
+    "month": 1,
+    "day": 25,
+    "pm25": 38.0,
+    "aqi_mean": 60.833333333333336,
+    "aqi_max": 76.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-01-26",
+    "month": 1,
+    "day": 26,
+    "pm25": 33.0,
+    "aqi_mean": 56.875,
+    "aqi_max": 70.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-01-27",
+    "month": 1,
+    "day": 27,
+    "pm25": 32.0,
+    "aqi_mean": 60.791666666666664,
+    "aqi_max": 69.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-01-28",
+    "month": 1,
+    "day": 28,
+    "pm25": 39.0,
+    "aqi_mean": 64.33333333333333,
+    "aqi_max": 80.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-01-29",
+    "month": 1,
+    "day": 29,
+    "pm25": 48.0,
+    "aqi_mean": 71.91666666666667,
+    "aqi_max": 111.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-01-30",
+    "month": 1,
+    "day": 30,
+    "pm25": 115.0,
+    "aqi_mean": 152.0,
+    "aqi_max": 202.0,
+    "level_mean": "Moderate",
+    "level_max": "Heavy"
+  },
+  {
+    "date": "2024-01-31",
+    "month": 1,
+    "day": 31,
+    "pm25": 124.0,
+    "aqi_mean": 163.16666666666666,
+    "aqi_max": 190.0,
+    "level_mean": "Moderate",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-02-01",
+    "month": 2,
+    "day": 1,
+    "pm25": 71.0,
+    "aqi_mean": 95.41666666666667,
+    "aqi_max": 136.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-02-02",
+    "month": 2,
+    "day": 2,
+    "pm25": 90.0,
+    "aqi_mean": 119.29166666666667,
+    "aqi_max": 153.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-02-03",
+    "month": 2,
+    "day": 3,
+    "pm25": 82.0,
+    "aqi_mean": 109.45833333333333,
+    "aqi_max": 153.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-02-04",
+    "month": 2,
+    "day": 4,
+    "pm25": 49.0,
+    "aqi_mean": 66.33333333333333,
+    "aqi_max": 116.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-02-05",
+    "month": 2,
+    "day": 5,
+    "pm25": 95.0,
+    "aqi_mean": 127.375,
+    "aqi_max": 194.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-02-06",
+    "month": 2,
+    "day": 6,
+    "pm25": 91.0,
+    "aqi_mean": 122.95652173913044,
+    "aqi_max": 190.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-02-07",
+    "month": 2,
+    "day": 7,
+    "pm25": 75.0,
+    "aqi_mean": 100.91666666666667,
+    "aqi_max": 151.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-02-08",
+    "month": 2,
+    "day": 8,
+    "pm25": 108.0,
+    "aqi_mean": 143.20833333333334,
+    "aqi_max": 196.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-02-09",
+    "month": 2,
+    "day": 9,
+    "pm25": 96.0,
+    "aqi_mean": 122.66666666666667,
+    "aqi_max": 450.0,
+    "level_mean": "Mild",
+    "level_max": "Severe"
+  },
+  {
+    "date": "2024-02-10",
+    "month": 2,
+    "day": 10,
+    "pm25": 266.0,
+    "aqi_mean": 277.5416666666667,
+    "aqi_max": 500.0,
+    "level_mean": "Heavy",
+    "level_max": "Severe"
+  },
+  {
+    "date": "2024-02-11",
+    "month": 2,
+    "day": 11,
+    "pm25": 57.0,
+    "aqi_mean": 83.66666666666667,
+    "aqi_max": 139.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-02-12",
+    "month": 2,
+    "day": 12,
+    "pm25": 71.0,
+    "aqi_mean": 95.54166666666667,
+    "aqi_max": 204.0,
+    "level_mean": "Good",
+    "level_max": "Heavy"
+  },
+  {
+    "date": "2024-02-13",
+    "month": 2,
+    "day": 13,
+    "pm25": 70.0,
+    "aqi_mean": 94.25,
+    "aqi_max": 173.0,
+    "level_mean": "Good",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-02-14",
+    "month": 2,
+    "day": 14,
+    "pm25": 57.0,
+    "aqi_mean": 82.0,
+    "aqi_max": 167.0,
+    "level_mean": "Good",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-02-15",
+    "month": 2,
+    "day": 15,
+    "pm25": 30.0,
+    "aqi_mean": 68.5,
+    "aqi_max": 115.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-02-16",
+    "month": 2,
+    "day": 16,
+    "pm25": 43.0,
+    "aqi_mean": 69.375,
+    "aqi_max": 77.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-02-17",
+    "month": 2,
+    "day": 17,
+    "pm25": 49.0,
+    "aqi_mean": 72.5,
+    "aqi_max": 114.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-02-18",
+    "month": 2,
+    "day": 18,
+    "pm25": 73.0,
+    "aqi_mean": 103.33333333333333,
+    "aqi_max": 149.0,
+    "level_mean": "Mild",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-02-19",
+    "month": 2,
+    "day": 19,
+    "pm25": 51.0,
+    "aqi_mean": 127.29166666666667,
+    "aqi_max": 185.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-02-20",
+    "month": 2,
+    "day": 20,
+    "pm25": 22.0,
+    "aqi_mean": 55.083333333333336,
+    "aqi_max": 110.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-02-21",
+    "month": 2,
+    "day": 21,
+    "pm25": 32.0,
+    "aqi_mean": 46.083333333333336,
+    "aqi_max": 56.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-02-22",
+    "month": 2,
+    "day": 22,
+    "pm25": 24.0,
+    "aqi_mean": 37.833333333333336,
+    "aqi_max": 56.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-02-23",
+    "month": 2,
+    "day": 23,
+    "pm25": 31.0,
+    "aqi_mean": 44.208333333333336,
+    "aqi_max": 61.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-02-24",
+    "month": 2,
+    "day": 24,
+    "pm25": 76.0,
+    "aqi_mean": 100.41666666666667,
+    "aqi_max": 267.0,
+    "level_mean": "Mild",
+    "level_max": "Heavy"
+  },
+  {
+    "date": "2024-02-25",
+    "month": 2,
+    "day": 25,
+    "pm25": 90.0,
+    "aqi_mean": 119.0,
+    "aqi_max": 204.0,
+    "level_mean": "Mild",
+    "level_max": "Heavy"
+  },
+  {
+    "date": "2024-02-26",
+    "month": 2,
+    "day": 26,
+    "pm25": 54.0,
+    "aqi_mean": 74.83333333333333,
+    "aqi_max": 123.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-02-27",
+    "month": 2,
+    "day": 27,
+    "pm25": 79.0,
+    "aqi_mean": 105.70833333333333,
+    "aqi_max": 136.0,
+    "level_mean": "Mild",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-02-28",
+    "month": 2,
+    "day": 28,
+    "pm25": 102.0,
+    "aqi_mean": 133.70833333333334,
+    "aqi_max": 159.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-02-29",
+    "month": 2,
+    "day": 29,
+    "pm25": 43.0,
+    "aqi_mean": 70.66666666666667,
+    "aqi_max": 161.0,
+    "level_mean": "Good",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-03-01",
+    "month": 3,
+    "day": 1,
+    "pm25": 15.0,
+    "aqi_mean": 40.083333333333336,
+    "aqi_max": 53.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-03-02",
+    "month": 3,
+    "day": 2,
+    "pm25": 25.0,
+    "aqi_mean": 60.416666666666664,
+    "aqi_max": 71.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-03-03",
+    "month": 3,
+    "day": 3,
+    "pm25": 38.0,
+    "aqi_mean": 66.91666666666667,
+    "aqi_max": 93.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-03-04",
+    "month": 3,
+    "day": 4,
+    "pm25": 82.0,
+    "aqi_mean": 109.33333333333333,
+    "aqi_max": 119.0,
+    "level_mean": "Mild",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-03-05",
+    "month": 3,
+    "day": 5,
+    "pm25": 114.0,
+    "aqi_mean": 150.875,
+    "aqi_max": 177.0,
+    "level_mean": "Moderate",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-03-06",
+    "month": 3,
+    "day": 6,
+    "pm25": 43.0,
+    "aqi_mean": 63.041666666666664,
+    "aqi_max": 144.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-03-07",
+    "month": 3,
+    "day": 7,
+    "pm25": 16.0,
+    "aqi_mean": 46.5,
+    "aqi_max": 74.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-03-08",
+    "month": 3,
+    "day": 8,
+    "pm25": 20.0,
+    "aqi_mean": 44.791666666666664,
+    "aqi_max": 69.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-03-09",
+    "month": 3,
+    "day": 9,
+    "pm25": 47.0,
+    "aqi_mean": 74.33333333333333,
+    "aqi_max": 106.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-03-10",
+    "month": 3,
+    "day": 10,
+    "pm25": 62.0,
+    "aqi_mean": 91.5,
+    "aqi_max": 135.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-03-11",
+    "month": 3,
+    "day": 11,
+    "pm25": 31.0,
+    "aqi_mean": 63.583333333333336,
+    "aqi_max": 104.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-03-12",
+    "month": 3,
+    "day": 12,
+    "pm25": 26.0,
+    "aqi_mean": 51.625,
+    "aqi_max": 73.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-03-13",
+    "month": 3,
+    "day": 13,
+    "pm25": 43.0,
+    "aqi_mean": 70.75,
+    "aqi_max": 89.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-03-14",
+    "month": 3,
+    "day": 14,
+    "pm25": 51.0,
+    "aqi_mean": 80.375,
+    "aqi_max": 103.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-03-15",
+    "month": 3,
+    "day": 15,
+    "pm25": 65.0,
+    "aqi_mean": 91.04166666666667,
+    "aqi_max": 120.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-03-16",
+    "month": 3,
+    "day": 16,
+    "pm25": 65.0,
+    "aqi_mean": 164.54166666666666,
+    "aqi_max": 444.0,
+    "level_mean": "Moderate",
+    "level_max": "Severe"
+  },
+  {
+    "date": "2024-03-17",
+    "month": 3,
+    "day": 17,
+    "pm25": 29.0,
+    "aqi_mean": 70.45833333333333,
+    "aqi_max": 120.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-03-18",
+    "month": 3,
+    "day": 18,
+    "pm25": 37.0,
+    "aqi_mean": 103.875,
+    "aqi_max": 196.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-03-19",
+    "month": 3,
+    "day": 19,
+    "pm25": 16.0,
+    "aqi_mean": 66.875,
+    "aqi_max": 97.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-03-20",
+    "month": 3,
+    "day": 20,
+    "pm25": 31.0,
+    "aqi_mean": 65.5,
+    "aqi_max": 84.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-03-21",
+    "month": 3,
+    "day": 21,
+    "pm25": 50.0,
+    "aqi_mean": 90.91666666666667,
+    "aqi_max": 104.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-03-22",
+    "month": 3,
+    "day": 22,
+    "pm25": 57.0,
+    "aqi_mean": 125.45833333333333,
+    "aqi_max": 196.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-03-23",
+    "month": 3,
+    "day": 23,
+    "pm25": 49.0,
+    "aqi_mean": 90.91666666666667,
+    "aqi_max": 115.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-03-24",
+    "month": 3,
+    "day": 24,
+    "pm25": 32.0,
+    "aqi_mean": 48.125,
+    "aqi_max": 98.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-03-25",
+    "month": 3,
+    "day": 25,
+    "pm25": 48.0,
+    "aqi_mean": 65.125,
+    "aqi_max": 118.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-03-26",
+    "month": 3,
+    "day": 26,
+    "pm25": 62.0,
+    "aqi_mean": 86.79166666666667,
+    "aqi_max": 114.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-03-27",
+    "month": 3,
+    "day": 27,
+    "pm25": 29.0,
+    "aqi_mean": 66.375,
+    "aqi_max": 101.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-03-28",
+    "month": 3,
+    "day": 28,
+    "pm25": 43.0,
+    "aqi_mean": 125.33333333333333,
+    "aqi_max": 183.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-03-29",
+    "month": 3,
+    "day": 29,
+    "pm25": 36.0,
+    "aqi_mean": 100.79166666666667,
+    "aqi_max": 186.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-03-30",
+    "month": 3,
+    "day": 30,
+    "pm25": 19.0,
+    "aqi_mean": 54.416666666666664,
+    "aqi_max": 76.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-03-31",
+    "month": 3,
+    "day": 31,
+    "pm25": 39.0,
+    "aqi_mean": 74.08333333333333,
+    "aqi_max": 101.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-04-01",
+    "month": 4,
+    "day": 1,
+    "pm25": 73.0,
+    "aqi_mean": 104.20833333333333,
+    "aqi_max": 126.0,
+    "level_mean": "Mild",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-04-02",
+    "month": 4,
+    "day": 2,
+    "pm25": 84.0,
+    "aqi_mean": 112.58333333333333,
+    "aqi_max": 166.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-04-03",
+    "month": 4,
+    "day": 3,
+    "pm25": 45.0,
+    "aqi_mean": 62.666666666666664,
+    "aqi_max": 76.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-04-04",
+    "month": 4,
+    "day": 4,
+    "pm25": 46.0,
+    "aqi_mean": 65.83333333333333,
+    "aqi_max": 96.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-04-05",
+    "month": 4,
+    "day": 5,
+    "pm25": 60.0,
+    "aqi_mean": 82.75,
+    "aqi_max": 115.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-04-06",
+    "month": 4,
+    "day": 6,
+    "pm25": 31.0,
+    "aqi_mean": 61.041666666666664,
+    "aqi_max": 90.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-04-07",
+    "month": 4,
+    "day": 7,
+    "pm25": 31.0,
+    "aqi_mean": 64.33333333333333,
+    "aqi_max": 77.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-04-08",
+    "month": 4,
+    "day": 8,
+    "pm25": 47.0,
+    "aqi_mean": 76.66666666666667,
+    "aqi_max": 131.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-04-09",
+    "month": 4,
+    "day": 9,
+    "pm25": 51.0,
+    "aqi_mean": 81.91666666666667,
+    "aqi_max": 122.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-04-10",
+    "month": 4,
+    "day": 10,
+    "pm25": 43.0,
+    "aqi_mean": 66.41666666666667,
+    "aqi_max": 85.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-04-11",
+    "month": 4,
+    "day": 11,
+    "pm25": 46.0,
+    "aqi_mean": 74.70833333333333,
+    "aqi_max": 90.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-04-12",
+    "month": 4,
+    "day": 12,
+    "pm25": 37.0,
+    "aqi_mean": 72.36363636363636,
+    "aqi_max": 86.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-04-13",
+    "month": 4,
+    "day": 13,
+    "pm25": 47.0,
+    "aqi_mean": 76.29166666666667,
+    "aqi_max": 98.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-04-14",
+    "month": 4,
+    "day": 14,
+    "pm25": 25.0,
+    "aqi_mean": 49.958333333333336,
+    "aqi_max": 90.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-04-15",
+    "month": 4,
+    "day": 15,
+    "pm25": 31.0,
+    "aqi_mean": 81.375,
+    "aqi_max": 122.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-04-16",
+    "month": 4,
+    "day": 16,
+    "pm25": 23.0,
+    "aqi_mean": 58.333333333333336,
+    "aqi_max": 87.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-04-17",
+    "month": 4,
+    "day": 17,
+    "pm25": 42.0,
+    "aqi_mean": 77.20833333333333,
+    "aqi_max": 99.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-04-18",
+    "month": 4,
+    "day": 18,
+    "pm25": 59.0,
+    "aqi_mean": 98.08333333333333,
+    "aqi_max": 116.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-04-19",
+    "month": 4,
+    "day": 19,
+    "pm25": 47.0,
+    "aqi_mean": 70.625,
+    "aqi_max": 109.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-04-20",
+    "month": 4,
+    "day": 20,
+    "pm25": 23.0,
+    "aqi_mean": 41.95652173913044,
+    "aqi_max": 56.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-04-21",
+    "month": 4,
+    "day": 21,
+    "pm25": 29.0,
+    "aqi_mean": 56.56521739130435,
+    "aqi_max": 76.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-04-22",
+    "month": 4,
+    "day": 22,
+    "pm25": 46.0,
+    "aqi_mean": 85.54166666666667,
+    "aqi_max": 150.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-04-23",
+    "month": 4,
+    "day": 23,
+    "pm25": 32.0,
+    "aqi_mean": 111.45833333333333,
+    "aqi_max": 497.0,
+    "level_mean": "Mild",
+    "level_max": "Severe"
+  },
+  {
+    "date": "2024-04-24",
+    "month": 4,
+    "day": 24,
+    "pm25": 37.0,
+    "aqi_mean": 76.33333333333333,
+    "aqi_max": 95.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-04-25",
+    "month": 4,
+    "day": 25,
+    "pm25": 47.0,
+    "aqi_mean": 84.16666666666667,
+    "aqi_max": 100.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-04-26",
+    "month": 4,
+    "day": 26,
+    "pm25": 39.0,
+    "aqi_mean": 90.0,
+    "aqi_max": 153.0,
+    "level_mean": "Good",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-04-27",
+    "month": 4,
+    "day": 27,
+    "pm25": 51.0,
+    "aqi_mean": 85.29166666666667,
+    "aqi_max": 101.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-04-28",
+    "month": 4,
+    "day": 28,
+    "pm25": 53.0,
+    "aqi_mean": 73.25,
+    "aqi_max": 94.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-04-29",
+    "month": 4,
+    "day": 29,
+    "pm25": 44.0,
+    "aqi_mean": 64.04166666666667,
+    "aqi_max": 113.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-04-30",
+    "month": 4,
+    "day": 30,
+    "pm25": 11.0,
+    "aqi_mean": 29.416666666666668,
+    "aqi_max": 42.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-05-01",
+    "month": 5,
+    "day": 1,
+    "pm25": 38.0,
+    "aqi_mean": 62.416666666666664,
+    "aqi_max": 85.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-05-02",
+    "month": 5,
+    "day": 2,
+    "pm25": 34.0,
+    "aqi_mean": 66.45833333333333,
+    "aqi_max": 83.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-05-03",
+    "month": 5,
+    "day": 3,
+    "pm25": 37.0,
+    "aqi_mean": 68.875,
+    "aqi_max": 78.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-05-04",
+    "month": 5,
+    "day": 4,
+    "pm25": 29.0,
+    "aqi_mean": 51.0,
+    "aqi_max": 61.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-05-05",
+    "month": 5,
+    "day": 5,
+    "pm25": 30.0,
+    "aqi_mean": 52.416666666666664,
+    "aqi_max": 66.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-05-06",
+    "month": 5,
+    "day": 6,
+    "pm25": 22.0,
+    "aqi_mean": 38.458333333333336,
+    "aqi_max": 49.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-05-07",
+    "month": 5,
+    "day": 7,
+    "pm25": 18.0,
+    "aqi_mean": 45.083333333333336,
+    "aqi_max": 60.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-05-08",
+    "month": 5,
+    "day": 8,
+    "pm25": 34.0,
+    "aqi_mean": 71.29166666666667,
+    "aqi_max": 95.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-05-09",
+    "month": 5,
+    "day": 9,
+    "pm25": 37.0,
+    "aqi_mean": 73.83333333333333,
+    "aqi_max": 101.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-05-10",
+    "month": 5,
+    "day": 10,
+    "pm25": 33.0,
+    "aqi_mean": 66.83333333333333,
+    "aqi_max": 102.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-05-11",
+    "month": 5,
+    "day": 11,
+    "pm25": 33.0,
+    "aqi_mean": 101.20833333333333,
+    "aqi_max": 188.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-05-12",
+    "month": 5,
+    "day": 12,
+    "pm25": 15.0,
+    "aqi_mean": 46.708333333333336,
+    "aqi_max": 67.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-05-13",
+    "month": 5,
+    "day": 13,
+    "pm25": 27.0,
+    "aqi_mean": 67.20833333333333,
+    "aqi_max": 98.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-05-14",
+    "month": 5,
+    "day": 14,
+    "pm25": 36.0,
+    "aqi_mean": 87.16666666666667,
+    "aqi_max": 111.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-05-15",
+    "month": 5,
+    "day": 15,
+    "pm25": 18.0,
+    "aqi_mean": 56.958333333333336,
+    "aqi_max": 96.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-05-16",
+    "month": 5,
+    "day": 16,
+    "pm25": 40.0,
+    "aqi_mean": 80.70833333333333,
+    "aqi_max": 114.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-05-17",
+    "month": 5,
+    "day": 17,
+    "pm25": 39.0,
+    "aqi_mean": 83.33333333333333,
+    "aqi_max": 103.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-05-18",
+    "month": 5,
+    "day": 18,
+    "pm25": 42.0,
+    "aqi_mean": 92.45833333333333,
+    "aqi_max": 124.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-05-19",
+    "month": 5,
+    "day": 19,
+    "pm25": 45.0,
+    "aqi_mean": 89.91666666666667,
+    "aqi_max": 115.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-05-20",
+    "month": 5,
+    "day": 20,
+    "pm25": 31.0,
+    "aqi_mean": 61.875,
+    "aqi_max": 98.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-05-21",
+    "month": 5,
+    "day": 21,
+    "pm25": 35.0,
+    "aqi_mean": 76.375,
+    "aqi_max": 109.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-05-22",
+    "month": 5,
+    "day": 22,
+    "pm25": 33.0,
+    "aqi_mean": 84.58333333333333,
+    "aqi_max": 113.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-05-23",
+    "month": 5,
+    "day": 23,
+    "pm25": 35.0,
+    "aqi_mean": 90.70833333333333,
+    "aqi_max": 118.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-05-24",
+    "month": 5,
+    "day": 24,
+    "pm25": 44.0,
+    "aqi_mean": 80.45833333333333,
+    "aqi_max": 106.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-05-25",
+    "month": 5,
+    "day": 25,
+    "pm25": 31.0,
+    "aqi_mean": 49.291666666666664,
+    "aqi_max": 91.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-05-26",
+    "month": 5,
+    "day": 26,
+    "pm25": 28.0,
+    "aqi_mean": 53.75,
+    "aqi_max": 90.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-05-27",
+    "month": 5,
+    "day": 27,
+    "pm25": 15.0,
+    "aqi_mean": 46.708333333333336,
+    "aqi_max": 60.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-05-28",
+    "month": 5,
+    "day": 28,
+    "pm25": 28.0,
+    "aqi_mean": 77.625,
+    "aqi_max": 123.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-05-29",
+    "month": 5,
+    "day": 29,
+    "pm25": 25.0,
+    "aqi_mean": 63.916666666666664,
+    "aqi_max": 107.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-05-30",
+    "month": 5,
+    "day": 30,
+    "pm25": 28.0,
+    "aqi_mean": 59.333333333333336,
+    "aqi_max": 82.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-05-31",
+    "month": 5,
+    "day": 31,
+    "pm25": 13.0,
+    "aqi_mean": 44.625,
+    "aqi_max": 73.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-06-01",
+    "month": 6,
+    "day": 1,
+    "pm25": 20.0,
+    "aqi_mean": 57.666666666666664,
+    "aqi_max": 80.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-06-02",
+    "month": 6,
+    "day": 2,
+    "pm25": 24.0,
+    "aqi_mean": 57.875,
+    "aqi_max": 84.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-06-03",
+    "month": 6,
+    "day": 3,
+    "pm25": 23.0,
+    "aqi_mean": 61.25,
+    "aqi_max": 75.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-06-04",
+    "month": 6,
+    "day": 4,
+    "pm25": 36.0,
+    "aqi_mean": 68.04166666666667,
+    "aqi_max": 98.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-06-05",
+    "month": 6,
+    "day": 5,
+    "pm25": 39.0,
+    "aqi_mean": 55.208333333333336,
+    "aqi_max": 83.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-06-06",
+    "month": 6,
+    "day": 6,
+    "pm25": 50.0,
+    "aqi_mean": 76.54166666666667,
+    "aqi_max": 96.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-06-07",
+    "month": 6,
+    "day": 7,
+    "pm25": 25.0,
+    "aqi_mean": 52.5,
+    "aqi_max": 94.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-06-08",
+    "month": 6,
+    "day": 8,
+    "pm25": 19.0,
+    "aqi_mean": 55.666666666666664,
+    "aqi_max": 104.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-06-09",
+    "month": 6,
+    "day": 9,
+    "pm25": 19.0,
+    "aqi_mean": 57.666666666666664,
+    "aqi_max": 79.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-06-10",
+    "month": 6,
+    "day": 10,
+    "pm25": 20.0,
+    "aqi_mean": 57.958333333333336,
+    "aqi_max": 108.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-06-11",
+    "month": 6,
+    "day": 11,
+    "pm25": 30.0,
+    "aqi_mean": 68.33333333333333,
+    "aqi_max": 118.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-06-12",
+    "month": 6,
+    "day": 12,
+    "pm25": 26.0,
+    "aqi_mean": 75.83333333333333,
+    "aqi_max": 118.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-06-13",
+    "month": 6,
+    "day": 13,
+    "pm25": 26.0,
+    "aqi_mean": 68.45833333333333,
+    "aqi_max": 129.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-06-14",
+    "month": 6,
+    "day": 14,
+    "pm25": 19.0,
+    "aqi_mean": 53.0,
+    "aqi_max": 61.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-06-15",
+    "month": 6,
+    "day": 15,
+    "pm25": 19.0,
+    "aqi_mean": 63.75,
+    "aqi_max": 101.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-06-16",
+    "month": 6,
+    "day": 16,
+    "pm25": 33.0,
+    "aqi_mean": 76.79166666666667,
+    "aqi_max": 114.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-06-17",
+    "month": 6,
+    "day": 17,
+    "pm25": 42.0,
+    "aqi_mean": 88.20833333333333,
+    "aqi_max": 118.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-06-18",
+    "month": 6,
+    "day": 18,
+    "pm25": 32.0,
+    "aqi_mean": 74.08333333333333,
+    "aqi_max": 103.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-06-19",
+    "month": 6,
+    "day": 19,
+    "pm25": 32.0,
+    "aqi_mean": 87.91666666666667,
+    "aqi_max": 121.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-06-20",
+    "month": 6,
+    "day": 20,
+    "pm25": 31.0,
+    "aqi_mean": 88.58333333333333,
+    "aqi_max": 119.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-06-21",
+    "month": 6,
+    "day": 21,
+    "pm25": 29.0,
+    "aqi_mean": 59.75,
+    "aqi_max": 74.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-06-22",
+    "month": 6,
+    "day": 22,
+    "pm25": 26.0,
+    "aqi_mean": 65.625,
+    "aqi_max": 88.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-06-23",
+    "month": 6,
+    "day": 23,
+    "pm25": 55.0,
+    "aqi_mean": 141.6086956521739,
+    "aqi_max": 424.0,
+    "level_mean": "Mild",
+    "level_max": "Severe"
+  },
+  {
+    "date": "2024-06-24",
+    "month": 6,
+    "day": 24,
+    "pm25": 24.0,
+    "aqi_mean": 62.75,
+    "aqi_max": 86.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-06-25",
+    "month": 6,
+    "day": 25,
+    "pm25": 32.0,
+    "aqi_mean": 69.66666666666667,
+    "aqi_max": 96.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-06-26",
+    "month": 6,
+    "day": 26,
+    "pm25": 39.0,
+    "aqi_mean": 79.91666666666667,
+    "aqi_max": 110.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-06-27",
+    "month": 6,
+    "day": 27,
+    "pm25": 33.0,
+    "aqi_mean": 73.375,
+    "aqi_max": 108.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-06-28",
+    "month": 6,
+    "day": 28,
+    "pm25": 33.0,
+    "aqi_mean": 90.58333333333333,
+    "aqi_max": 124.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-06-29",
+    "month": 6,
+    "day": 29,
+    "pm25": 37.0,
+    "aqi_mean": 84.54166666666667,
+    "aqi_max": 130.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-06-30",
+    "month": 6,
+    "day": 30,
+    "pm25": 25.0,
+    "aqi_mean": 54.083333333333336,
+    "aqi_max": 68.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-07-01",
+    "month": 7,
+    "day": 1,
+    "pm25": 24.0,
+    "aqi_mean": 57.833333333333336,
+    "aqi_max": 74.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-07-02",
+    "month": 7,
+    "day": 2,
+    "pm25": 14.0,
+    "aqi_mean": 39.208333333333336,
+    "aqi_max": 48.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-07-03",
+    "month": 7,
+    "day": 3,
+    "pm25": 30.0,
+    "aqi_mean": 63.75,
+    "aqi_max": 110.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-07-04",
+    "month": 7,
+    "day": 4,
+    "pm25": 38.0,
+    "aqi_mean": 77.08333333333333,
+    "aqi_max": 107.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-07-05",
+    "month": 7,
+    "day": 5,
+    "pm25": 48.0,
+    "aqi_mean": 68.5,
+    "aqi_max": 86.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-07-06",
+    "month": 7,
+    "day": 6,
+    "pm25": 30.0,
+    "aqi_mean": 72.70833333333333,
+    "aqi_max": 112.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-07-07",
+    "month": 7,
+    "day": 7,
+    "pm25": 20.0,
+    "aqi_mean": 48.75,
+    "aqi_max": 54.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-07-08",
+    "month": 7,
+    "day": 8,
+    "pm25": 28.0,
+    "aqi_mean": 58.85,
+    "aqi_max": 102.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-07-09",
+    "month": 7,
+    "day": 9,
+    "pm25": 34.0,
+    "aqi_mean": 64.25,
+    "aqi_max": 101.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-07-10",
+    "month": 7,
+    "day": 10,
+    "pm25": 34.0,
+    "aqi_mean": 75.625,
+    "aqi_max": 109.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-07-11",
+    "month": 7,
+    "day": 11,
+    "pm25": 37.0,
+    "aqi_mean": 73.83333333333333,
+    "aqi_max": 116.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-07-12",
+    "month": 7,
+    "day": 12,
+    "pm25": 26.0,
+    "aqi_mean": 69.45833333333333,
+    "aqi_max": 112.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-07-13",
+    "month": 7,
+    "day": 13,
+    "pm25": 33.0,
+    "aqi_mean": 70.375,
+    "aqi_max": 118.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-07-14",
+    "month": 7,
+    "day": 14,
+    "pm25": 39.0,
+    "aqi_mean": 63.791666666666664,
+    "aqi_max": 102.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-07-15",
+    "month": 7,
+    "day": 15,
+    "pm25": 51.0,
+    "aqi_mean": 70.0,
+    "aqi_max": 88.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-07-16",
+    "month": 7,
+    "day": 16,
+    "pm25": 31.0,
+    "aqi_mean": 51.375,
+    "aqi_max": 60.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-07-17",
+    "month": 7,
+    "day": 17,
+    "pm25": 13.0,
+    "aqi_mean": 44.75,
+    "aqi_max": 74.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-07-18",
+    "month": 7,
+    "day": 18,
+    "pm25": 19.0,
+    "aqi_mean": 65.875,
+    "aqi_max": 108.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-07-19",
+    "month": 7,
+    "day": 19,
+    "pm25": 21.0,
+    "aqi_mean": 71.5,
+    "aqi_max": 104.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-07-20",
+    "month": 7,
+    "day": 20,
+    "pm25": 16.0,
+    "aqi_mean": 62.333333333333336,
+    "aqi_max": 90.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-07-21",
+    "month": 7,
+    "day": 21,
+    "pm25": 20.0,
+    "aqi_mean": 58.375,
+    "aqi_max": 99.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-07-22",
+    "month": 7,
+    "day": 22,
+    "pm25": 33.0,
+    "aqi_mean": 66.66666666666667,
+    "aqi_max": 94.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-07-23",
+    "month": 7,
+    "day": 23,
+    "pm25": 31.0,
+    "aqi_mean": 64.20833333333333,
+    "aqi_max": 83.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-07-24",
+    "month": 7,
+    "day": 24,
+    "pm25": 24.0,
+    "aqi_mean": 50.541666666666664,
+    "aqi_max": 63.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-07-25",
+    "month": 7,
+    "day": 25,
+    "pm25": 18.0,
+    "aqi_mean": 37.125,
+    "aqi_max": 54.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-07-26",
+    "month": 7,
+    "day": 26,
+    "pm25": 21.0,
+    "aqi_mean": 55.666666666666664,
+    "aqi_max": 98.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-07-27",
+    "month": 7,
+    "day": 27,
+    "pm25": 24.0,
+    "aqi_mean": 64.33333333333333,
+    "aqi_max": 112.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-07-28",
+    "month": 7,
+    "day": 28,
+    "pm25": 24.0,
+    "aqi_mean": 65.41666666666667,
+    "aqi_max": 109.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-07-29",
+    "month": 7,
+    "day": 29,
+    "pm25": 22.0,
+    "aqi_mean": 47.583333333333336,
+    "aqi_max": 61.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-07-30",
+    "month": 7,
+    "day": 30,
+    "pm25": 18.0,
+    "aqi_mean": 31.291666666666668,
+    "aqi_max": 56.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-07-31",
+    "month": 7,
+    "day": 31,
+    "pm25": 22.0,
+    "aqi_mean": 48.125,
+    "aqi_max": 96.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-08-01",
+    "month": 8,
+    "day": 1,
+    "pm25": 23.0,
+    "aqi_mean": 69.91666666666667,
+    "aqi_max": 106.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-08-02",
+    "month": 8,
+    "day": 2,
+    "pm25": 24.0,
+    "aqi_mean": 60.708333333333336,
+    "aqi_max": 102.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-08-03",
+    "month": 8,
+    "day": 3,
+    "pm25": 26.0,
+    "aqi_mean": 44.958333333333336,
+    "aqi_max": 66.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-08-04",
+    "month": 8,
+    "day": 4,
+    "pm25": 22.0,
+    "aqi_mean": 59.041666666666664,
+    "aqi_max": 111.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-08-05",
+    "month": 8,
+    "day": 5,
+    "pm25": 10.0,
+    "aqi_mean": 39.25,
+    "aqi_max": 84.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-08-06",
+    "month": 8,
+    "day": 6,
+    "pm25": 18.0,
+    "aqi_mean": 56.75,
+    "aqi_max": 109.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-08-07",
+    "month": 8,
+    "day": 7,
+    "pm25": 16.0,
+    "aqi_mean": 35.375,
+    "aqi_max": 51.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-08-08",
+    "month": 8,
+    "day": 8,
+    "pm25": 19.0,
+    "aqi_mean": 31.0,
+    "aqi_max": 40.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-08-09",
+    "month": 8,
+    "day": 9,
+    "pm25": 22.0,
+    "aqi_mean": 36.291666666666664,
+    "aqi_max": 50.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-08-10",
+    "month": 8,
+    "day": 10,
+    "pm25": 17.0,
+    "aqi_mean": 53.291666666666664,
+    "aqi_max": 85.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-08-11",
+    "month": 8,
+    "day": 11,
+    "pm25": 7.0,
+    "aqi_mean": 29.73913043478261,
+    "aqi_max": 38.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-08-12",
+    "month": 8,
+    "day": 12,
+    "pm25": 8.0,
+    "aqi_mean": 32.25,
+    "aqi_max": 39.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-08-13",
+    "month": 8,
+    "day": 13,
+    "pm25": 12.0,
+    "aqi_mean": 35.625,
+    "aqi_max": 50.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-08-14",
+    "month": 8,
+    "day": 14,
+    "pm25": 22.0,
+    "aqi_mean": 48.0,
+    "aqi_max": 81.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-08-15",
+    "month": 8,
+    "day": 15,
+    "pm25": 27.0,
+    "aqi_mean": 45.875,
+    "aqi_max": 71.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-08-16",
+    "month": 8,
+    "day": 16,
+    "pm25": 29.0,
+    "aqi_mean": 46.875,
+    "aqi_max": 57.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-08-18",
+    "month": 8,
+    "day": 18,
+    "pm25": 34.0,
+    "aqi_mean": 60.541666666666664,
+    "aqi_max": 91.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-08-19",
+    "month": 8,
+    "day": 19,
+    "pm25": 16.0,
+    "aqi_mean": 39.208333333333336,
+    "aqi_max": 79.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-08-20",
+    "month": 8,
+    "day": 20,
+    "pm25": 13.0,
+    "aqi_mean": 34.833333333333336,
+    "aqi_max": 45.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-08-21",
+    "month": 8,
+    "day": 21,
+    "pm25": 21.0,
+    "aqi_mean": 55.791666666666664,
+    "aqi_max": 88.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-08-22",
+    "month": 8,
+    "day": 22,
+    "pm25": 27.0,
+    "aqi_mean": 66.25,
+    "aqi_max": 104.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-08-23",
+    "month": 8,
+    "day": 23,
+    "pm25": 31.0,
+    "aqi_mean": 73.70833333333333,
+    "aqi_max": 107.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-08-24",
+    "month": 8,
+    "day": 24,
+    "pm25": 33.0,
+    "aqi_mean": 73.16666666666667,
+    "aqi_max": 110.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-08-25",
+    "month": 8,
+    "day": 25,
+    "pm25": 38.0,
+    "aqi_mean": 57.083333333333336,
+    "aqi_max": 75.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-08-26",
+    "month": 8,
+    "day": 26,
+    "pm25": 12.0,
+    "aqi_mean": 27.166666666666668,
+    "aqi_max": 40.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-08-27",
+    "month": 8,
+    "day": 27,
+    "pm25": 8.0,
+    "aqi_mean": 28.166666666666668,
+    "aqi_max": 45.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-08-28",
+    "month": 8,
+    "day": 28,
+    "pm25": 13.0,
+    "aqi_mean": 39.833333333333336,
+    "aqi_max": 64.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-08-29",
+    "month": 8,
+    "day": 29,
+    "pm25": 19.0,
+    "aqi_mean": 55.208333333333336,
+    "aqi_max": 83.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-08-31",
+    "month": 8,
+    "day": 31,
+    "pm25": 32.0,
+    "aqi_mean": 60.54545454545455,
+    "aqi_max": 88.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-01",
+    "month": 9,
+    "day": 1,
+    "pm25": 17.0,
+    "aqi_mean": 40.27272727272727,
+    "aqi_max": 67.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-02",
+    "month": 9,
+    "day": 2,
+    "pm25": 13.0,
+    "aqi_mean": 26.833333333333332,
+    "aqi_max": 38.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-09-03",
+    "month": 9,
+    "day": 3,
+    "pm25": 28.0,
+    "aqi_mean": 50.375,
+    "aqi_max": 60.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-04",
+    "month": 9,
+    "day": 4,
+    "pm25": 34.0,
+    "aqi_mean": 55.625,
+    "aqi_max": 71.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-05",
+    "month": 9,
+    "day": 5,
+    "pm25": 6.0,
+    "aqi_mean": 26.708333333333332,
+    "aqi_max": 36.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-09-06",
+    "month": 9,
+    "day": 6,
+    "pm25": 15.0,
+    "aqi_mean": 38.541666666666664,
+    "aqi_max": 47.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-09-07",
+    "month": 9,
+    "day": 7,
+    "pm25": 26.0,
+    "aqi_mean": 51.13636363636363,
+    "aqi_max": 62.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-08",
+    "month": 9,
+    "day": 8,
+    "pm25": 42.0,
+    "aqi_mean": 59.875,
+    "aqi_max": 74.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-09",
+    "month": 9,
+    "day": 9,
+    "pm25": 39.0,
+    "aqi_mean": 57.416666666666664,
+    "aqi_max": 73.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-10",
+    "month": 9,
+    "day": 10,
+    "pm25": 8.0,
+    "aqi_mean": 25.083333333333332,
+    "aqi_max": 33.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-09-11",
+    "month": 9,
+    "day": 11,
+    "pm25": 10.0,
+    "aqi_mean": 25.608695652173914,
+    "aqi_max": 35.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-09-12",
+    "month": 9,
+    "day": 12,
+    "pm25": 10.0,
+    "aqi_mean": 34.291666666666664,
+    "aqi_max": 47.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-09-13",
+    "month": 9,
+    "day": 13,
+    "pm25": 21.0,
+    "aqi_mean": 49.583333333333336,
+    "aqi_max": 76.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-14",
+    "month": 9,
+    "day": 14,
+    "pm25": 16.0,
+    "aqi_mean": 33.625,
+    "aqi_max": 52.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-15",
+    "month": 9,
+    "day": 15,
+    "pm25": 20.0,
+    "aqi_mean": 37.0,
+    "aqi_max": 54.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-16",
+    "month": 9,
+    "day": 16,
+    "pm25": 32.0,
+    "aqi_mean": 60.458333333333336,
+    "aqi_max": 76.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-17",
+    "month": 9,
+    "day": 17,
+    "pm25": 39.0,
+    "aqi_mean": 59.5,
+    "aqi_max": 73.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-18",
+    "month": 9,
+    "day": 18,
+    "pm25": 28.0,
+    "aqi_mean": 45.22727272727273,
+    "aqi_max": 59.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-19",
+    "month": 9,
+    "day": 19,
+    "pm25": 18.0,
+    "aqi_mean": 37.56521739130435,
+    "aqi_max": 52.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-20",
+    "month": 9,
+    "day": 20,
+    "pm25": 20.0,
+    "aqi_mean": 43.458333333333336,
+    "aqi_max": 66.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-22",
+    "month": 9,
+    "day": 22,
+    "pm25": 14.0,
+    "aqi_mean": 33.291666666666664,
+    "aqi_max": 55.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-23",
+    "month": 9,
+    "day": 23,
+    "pm25": 29.0,
+    "aqi_mean": 59.0,
+    "aqi_max": 71.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-24",
+    "month": 9,
+    "day": 24,
+    "pm25": 47.0,
+    "aqi_mean": 78.82608695652173,
+    "aqi_max": 102.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-09-25",
+    "month": 9,
+    "day": 25,
+    "pm25": 59.0,
+    "aqi_mean": 86.26086956521739,
+    "aqi_max": 105.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-09-26",
+    "month": 9,
+    "day": 26,
+    "pm25": 55.0,
+    "aqi_mean": 77.26086956521739,
+    "aqi_max": 108.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-09-27",
+    "month": 9,
+    "day": 27,
+    "pm25": 55.0,
+    "aqi_mean": 76.04545454545455,
+    "aqi_max": 99.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-28",
+    "month": 9,
+    "day": 28,
+    "pm25": 58.0,
+    "aqi_mean": 78.88235294117646,
+    "aqi_max": 98.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-29",
+    "month": 9,
+    "day": 29,
+    "pm25": 27.0,
+    "aqi_mean": 43.21739130434783,
+    "aqi_max": 80.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-09-30",
+    "month": 9,
+    "day": 30,
+    "pm25": 8.0,
+    "aqi_mean": 20.583333333333332,
+    "aqi_max": 34.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-10-01",
+    "month": 10,
+    "day": 1,
+    "pm25": 18.0,
+    "aqi_mean": 66.9090909090909,
+    "aqi_max": 110.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-10-02",
+    "month": 10,
+    "day": 2,
+    "pm25": 19.0,
+    "aqi_mean": 46.25,
+    "aqi_max": 57.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-10-03",
+    "month": 10,
+    "day": 3,
+    "pm25": 27.0,
+    "aqi_mean": 51.45,
+    "aqi_max": 70.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-10-04",
+    "month": 10,
+    "day": 4,
+    "pm25": 40.0,
+    "aqi_mean": 64.1304347826087,
+    "aqi_max": 74.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-10-05",
+    "month": 10,
+    "day": 5,
+    "pm25": 46.0,
+    "aqi_mean": 69.52380952380952,
+    "aqi_max": 90.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-10-06",
+    "month": 10,
+    "day": 6,
+    "pm25": 47.0,
+    "aqi_mean": 68.91666666666667,
+    "aqi_max": 115.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-10-07",
+    "month": 10,
+    "day": 7,
+    "pm25": 21.0,
+    "aqi_mean": 39.04545454545455,
+    "aqi_max": 55.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-10-08",
+    "month": 10,
+    "day": 8,
+    "pm25": 31.0,
+    "aqi_mean": 54.375,
+    "aqi_max": 73.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-10-09",
+    "month": 10,
+    "day": 9,
+    "pm25": 31.0,
+    "aqi_mean": 56.458333333333336,
+    "aqi_max": 79.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-10-10",
+    "month": 10,
+    "day": 10,
+    "pm25": 16.0,
+    "aqi_mean": 47.041666666666664,
+    "aqi_max": 70.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-10-11",
+    "month": 10,
+    "day": 11,
+    "pm25": 36.0,
+    "aqi_mean": 67.33333333333333,
+    "aqi_max": 86.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-10-12",
+    "month": 10,
+    "day": 12,
+    "pm25": 45.0,
+    "aqi_mean": 71.54166666666667,
+    "aqi_max": 108.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-10-13",
+    "month": 10,
+    "day": 13,
+    "pm25": 62.0,
+    "aqi_mean": 85.5,
+    "aqi_max": 113.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-10-14",
+    "month": 10,
+    "day": 14,
+    "pm25": 86.0,
+    "aqi_mean": 113.52173913043478,
+    "aqi_max": 148.0,
+    "level_mean": "Mild",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-10-15",
+    "month": 10,
+    "day": 15,
+    "pm25": 47.0,
+    "aqi_mean": 69.20833333333333,
+    "aqi_max": 103.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-10-16",
+    "month": 10,
+    "day": 16,
+    "pm25": 61.0,
+    "aqi_mean": 85.45833333333333,
+    "aqi_max": 111.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-10-17",
+    "month": 10,
+    "day": 17,
+    "pm25": 58.0,
+    "aqi_mean": 77.95833333333333,
+    "aqi_max": 101.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-10-18",
+    "month": 10,
+    "day": 18,
+    "pm25": 9.0,
+    "aqi_mean": 18.0,
+    "aqi_max": 30.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-10-19",
+    "month": 10,
+    "day": 19,
+    "pm25": 12.0,
+    "aqi_mean": 21.708333333333332,
+    "aqi_max": 29.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-10-20",
+    "month": 10,
+    "day": 20,
+    "pm25": 17.0,
+    "aqi_mean": 30.666666666666668,
+    "aqi_max": 68.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-10-21",
+    "month": 10,
+    "day": 21,
+    "pm25": 68.0,
+    "aqi_mean": 93.1304347826087,
+    "aqi_max": 157.0,
+    "level_mean": "Good",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-10-22",
+    "month": 10,
+    "day": 22,
+    "pm25": 34.0,
+    "aqi_mean": 55.25,
+    "aqi_max": 145.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-10-23",
+    "month": 10,
+    "day": 23,
+    "pm25": 39.0,
+    "aqi_mean": 67.0,
+    "aqi_max": 92.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-10-24",
+    "month": 10,
+    "day": 24,
+    "pm25": 42.0,
+    "aqi_mean": 68.45833333333333,
+    "aqi_max": 87.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-10-25",
+    "month": 10,
+    "day": 25,
+    "pm25": 51.0,
+    "aqi_mean": 74.04347826086956,
+    "aqi_max": 104.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-10-26",
+    "month": 10,
+    "day": 26,
+    "pm25": 63.0,
+    "aqi_mean": 93.29166666666667,
+    "aqi_max": 156.0,
+    "level_mean": "Good",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-10-27",
+    "month": 10,
+    "day": 27,
+    "pm25": 16.0,
+    "aqi_mean": 38.916666666666664,
+    "aqi_max": 59.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-10-28",
+    "month": 10,
+    "day": 28,
+    "pm25": 47.0,
+    "aqi_mean": 73.58333333333333,
+    "aqi_max": 100.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-10-29",
+    "month": 10,
+    "day": 29,
+    "pm25": 60.0,
+    "aqi_mean": 83.875,
+    "aqi_max": 104.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-10-30",
+    "month": 10,
+    "day": 30,
+    "pm25": 48.0,
+    "aqi_mean": 69.875,
+    "aqi_max": 80.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-10-31",
+    "month": 10,
+    "day": 31,
+    "pm25": 46.0,
+    "aqi_mean": 64.25,
+    "aqi_max": 79.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-11-01",
+    "month": 11,
+    "day": 1,
+    "pm25": 39.0,
+    "aqi_mean": 54.166666666666664,
+    "aqi_max": 85.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-11-02",
+    "month": 11,
+    "day": 2,
+    "pm25": 91.0,
+    "aqi_mean": 122.33333333333333,
+    "aqi_max": 203.0,
+    "level_mean": "Mild",
+    "level_max": "Heavy"
+  },
+  {
+    "date": "2024-11-03",
+    "month": 11,
+    "day": 3,
+    "pm25": 74.0,
+    "aqi_mean": 98.04166666666667,
+    "aqi_max": 170.0,
+    "level_mean": "Good",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-11-04",
+    "month": 11,
+    "day": 4,
+    "pm25": 13.0,
+    "aqi_mean": 30.125,
+    "aqi_max": 55.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-11-05",
+    "month": 11,
+    "day": 5,
+    "pm25": 34.0,
+    "aqi_mean": 62.625,
+    "aqi_max": 81.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-11-06",
+    "month": 11,
+    "day": 6,
+    "pm25": 42.0,
+    "aqi_mean": 67.45833333333333,
+    "aqi_max": 89.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-11-07",
+    "month": 11,
+    "day": 7,
+    "pm25": 82.0,
+    "aqi_mean": 110.5,
+    "aqi_max": 151.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-11-08",
+    "month": 11,
+    "day": 8,
+    "pm25": 92.0,
+    "aqi_mean": 121.5,
+    "aqi_max": 151.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-11-09",
+    "month": 11,
+    "day": 9,
+    "pm25": 105.0,
+    "aqi_mean": 138.75,
+    "aqi_max": 184.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-11-10",
+    "month": 11,
+    "day": 10,
+    "pm25": 113.0,
+    "aqi_mean": 149.45833333333334,
+    "aqi_max": 202.0,
+    "level_mean": "Mild",
+    "level_max": "Heavy"
+  },
+  {
+    "date": "2024-11-11",
+    "month": 11,
+    "day": 11,
+    "pm25": 68.0,
+    "aqi_mean": 91.66666666666667,
+    "aqi_max": 156.0,
+    "level_mean": "Good",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-11-12",
+    "month": 11,
+    "day": 12,
+    "pm25": 83.0,
+    "aqi_mean": 111.0,
+    "aqi_max": 138.0,
+    "level_mean": "Mild",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-11-13",
+    "month": 11,
+    "day": 13,
+    "pm25": 54.0,
+    "aqi_mean": 73.79166666666667,
+    "aqi_max": 88.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-11-14",
+    "month": 11,
+    "day": 14,
+    "pm25": 58.0,
+    "aqi_mean": 79.79166666666667,
+    "aqi_max": 141.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-11-15",
+    "month": 11,
+    "day": 15,
+    "pm25": 62.0,
+    "aqi_mean": 83.17391304347827,
+    "aqi_max": 120.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-11-16",
+    "month": 11,
+    "day": 16,
+    "pm25": 27.0,
+    "aqi_mean": 63.166666666666664,
+    "aqi_max": 74.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-11-17",
+    "month": 11,
+    "day": 17,
+    "pm25": 17.0,
+    "aqi_mean": 51.791666666666664,
+    "aqi_max": 64.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-11-18",
+    "month": 11,
+    "day": 18,
+    "pm25": 39.0,
+    "aqi_mean": 69.08333333333333,
+    "aqi_max": 96.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-11-19",
+    "month": 11,
+    "day": 19,
+    "pm25": 72.0,
+    "aqi_mean": 96.91666666666667,
+    "aqi_max": 134.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-11-20",
+    "month": 11,
+    "day": 20,
+    "pm25": 43.0,
+    "aqi_mean": 61.0,
+    "aqi_max": 83.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-11-21",
+    "month": 11,
+    "day": 21,
+    "pm25": 49.0,
+    "aqi_mean": 70.70833333333333,
+    "aqi_max": 79.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-11-22",
+    "month": 11,
+    "day": 22,
+    "pm25": 42.0,
+    "aqi_mean": 65.79166666666667,
+    "aqi_max": 80.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-11-23",
+    "month": 11,
+    "day": 23,
+    "pm25": 74.0,
+    "aqi_mean": 98.79166666666667,
+    "aqi_max": 133.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-11-24",
+    "month": 11,
+    "day": 24,
+    "pm25": 111.0,
+    "aqi_mean": 148.66666666666666,
+    "aqi_max": 204.0,
+    "level_mean": "Mild",
+    "level_max": "Heavy"
+  },
+  {
+    "date": "2024-11-25",
+    "month": 11,
+    "day": 25,
+    "pm25": 10.0,
+    "aqi_mean": 37.0,
+    "aqi_max": 60.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-11-26",
+    "month": 11,
+    "day": 26,
+    "pm25": 10.0,
+    "aqi_mean": 46.291666666666664,
+    "aqi_max": 122.0,
+    "level_mean": "Excellent",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-11-27",
+    "month": 11,
+    "day": 27,
+    "pm25": 13.0,
+    "aqi_mean": 60.541666666666664,
+    "aqi_max": 107.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-11-28",
+    "month": 11,
+    "day": 28,
+    "pm25": 9.0,
+    "aqi_mean": 49.13636363636363,
+    "aqi_max": 62.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-11-29",
+    "month": 11,
+    "day": 29,
+    "pm25": 17.0,
+    "aqi_mean": 45.5,
+    "aqi_max": 67.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-11-30",
+    "month": 11,
+    "day": 30,
+    "pm25": 43.0,
+    "aqi_mean": 71.95833333333333,
+    "aqi_max": 108.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-12-01",
+    "month": 12,
+    "day": 1,
+    "pm25": 39.0,
+    "aqi_mean": 67.125,
+    "aqi_max": 95.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-03",
+    "month": 12,
+    "day": 3,
+    "pm25": 34.0,
+    "aqi_mean": 60.583333333333336,
+    "aqi_max": 71.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-04",
+    "month": 12,
+    "day": 4,
+    "pm25": 31.0,
+    "aqi_mean": 56.5,
+    "aqi_max": 71.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-05",
+    "month": 12,
+    "day": 5,
+    "pm25": 21.0,
+    "aqi_mean": 36.34782608695652,
+    "aqi_max": 52.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-06",
+    "month": 12,
+    "day": 6,
+    "pm25": 25.0,
+    "aqi_mean": 45.95454545454545,
+    "aqi_max": 63.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-07",
+    "month": 12,
+    "day": 7,
+    "pm25": 17.0,
+    "aqi_mean": 36.0,
+    "aqi_max": 47.0,
+    "level_mean": "Excellent",
+    "level_max": "Excellent"
+  },
+  {
+    "date": "2024-12-08",
+    "month": 12,
+    "day": 8,
+    "pm25": 28.0,
+    "aqi_mean": 52.25,
+    "aqi_max": 80.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-09",
+    "month": 12,
+    "day": 9,
+    "pm25": 40.0,
+    "aqi_mean": 65.625,
+    "aqi_max": 79.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-10",
+    "month": 12,
+    "day": 10,
+    "pm25": 40.0,
+    "aqi_mean": 64.375,
+    "aqi_max": 91.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-11",
+    "month": 12,
+    "day": 11,
+    "pm25": 98.0,
+    "aqi_mean": 129.20833333333334,
+    "aqi_max": 186.0,
+    "level_mean": "Mild",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-12-12",
+    "month": 12,
+    "day": 12,
+    "pm25": 106.0,
+    "aqi_mean": 141.56521739130434,
+    "aqi_max": 221.0,
+    "level_mean": "Mild",
+    "level_max": "Heavy"
+  },
+  {
+    "date": "2024-12-14",
+    "month": 12,
+    "day": 14,
+    "pm25": 26.0,
+    "aqi_mean": 57.916666666666664,
+    "aqi_max": 87.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-15",
+    "month": 12,
+    "day": 15,
+    "pm25": 36.0,
+    "aqi_mean": 60.916666666666664,
+    "aqi_max": 72.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-16",
+    "month": 12,
+    "day": 16,
+    "pm25": 41.0,
+    "aqi_mean": 66.875,
+    "aqi_max": 84.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-17",
+    "month": 12,
+    "day": 17,
+    "pm25": 29.0,
+    "aqi_mean": 58.25,
+    "aqi_max": 69.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-18",
+    "month": 12,
+    "day": 18,
+    "pm25": 18.0,
+    "aqi_mean": 40.86363636363637,
+    "aqi_max": 55.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-19",
+    "month": 12,
+    "day": 19,
+    "pm25": 54.0,
+    "aqi_mean": 80.75,
+    "aqi_max": 139.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-12-20",
+    "month": 12,
+    "day": 20,
+    "pm25": 40.0,
+    "aqi_mean": 69.33333333333333,
+    "aqi_max": 129.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-12-21",
+    "month": 12,
+    "day": 21,
+    "pm25": 17.0,
+    "aqi_mean": 40.875,
+    "aqi_max": 55.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-22",
+    "month": 12,
+    "day": 22,
+    "pm25": 42.0,
+    "aqi_mean": 66.54166666666667,
+    "aqi_max": 101.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-12-23",
+    "month": 12,
+    "day": 23,
+    "pm25": 47.0,
+    "aqi_mean": 72.41666666666667,
+    "aqi_max": 100.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-24",
+    "month": 12,
+    "day": 24,
+    "pm25": 75.0,
+    "aqi_mean": 96.11764705882354,
+    "aqi_max": 154.0,
+    "level_mean": "Good",
+    "level_max": "Moderate"
+  },
+  {
+    "date": "2024-12-25",
+    "month": 12,
+    "day": 25,
+    "pm25": 60.0,
+    "aqi_mean": 78.47058823529412,
+    "aqi_max": 128.0,
+    "level_mean": "Good",
+    "level_max": "Mild"
+  },
+  {
+    "date": "2024-12-26",
+    "month": 12,
+    "day": 26,
+    "pm25": 23.0,
+    "aqi_mean": 57.04545454545455,
+    "aqi_max": 62.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-27",
+    "month": 12,
+    "day": 27,
+    "pm25": 13.0,
+    "aqi_mean": 48.916666666666664,
+    "aqi_max": 52.0,
+    "level_mean": "Excellent",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-28",
+    "month": 12,
+    "day": 28,
+    "pm25": 30.0,
+    "aqi_mean": 58.875,
+    "aqi_max": 70.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-29",
+    "month": 12,
+    "day": 29,
+    "pm25": 46.0,
+    "aqi_mean": 76.25,
+    "aqi_max": 91.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-30",
+    "month": 12,
+    "day": 30,
+    "pm25": 34.0,
+    "aqi_mean": 79.45833333333333,
+    "aqi_max": 95.0,
+    "level_mean": "Good",
+    "level_max": "Good"
+  },
+  {
+    "date": "2024-12-31",
+    "month": 12,
+    "day": 31,
+    "pm25": 53.0,
+    "aqi_mean": 88.41666666666667,
+    "aqi_max": 151.0,
+    "level_mean": "Good",
+    "level_max": "Moderate"
+  }
+]

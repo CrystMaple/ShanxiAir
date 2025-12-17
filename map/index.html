@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>中国碳排放与山西空气质量可视化</title>
+  <script src="https://s4.zstatic.net/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+  <style>
+    :root {
+      --bg-color: #f7f9fc;
+      --text-color: #2c3e50;
+    }
+    * { box-sizing: border-box; }
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--bg-color);
+      overflow: hidden;
+    }
+    #mainMap { width: 100%; height: 100%; }
+
+    #map-reset {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 15;
+      display: none;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid rgba(0,0,0,0.12);
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+      color: #1f2d3d;
+      font-size: 13px;
+      font-weight: 700;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      user-select: none;
+    }
+    #map-reset:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+      background: rgba(255,255,255,0.98);
+    }
+    #map-reset:active { transform: translateY(0px) scale(0.98); }
+    #map-reset svg { width: 16px; height: 16px; display: block; }
+
+    #overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(6px);
+      display: none;
+      flex-direction: column;
+      z-index: 20;
+    }
+    #overlay-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 20px;
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      flex-shrink: 0;
+    }
+    #city-title {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+      color: #333;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    #overlay-close {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.10);
+      background: #fff;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      color: #1f2d3d;
+      flex-shrink: 0;
+      margin-left: 10px;
+    }
+    #overlay-close:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.14);
+      background: #f7f9fc;
+    }
+    #overlay-close:active { transform: translateY(0px) scale(0.98); }
+    #overlay-close svg { width: 18px; height: 18px; }
+
+    #chart-container {
+      flex: 1;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    #chart-container.scrollable {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    #city-chart { 
+      height: 100%; 
+      width: 100%; 
+    }
+    
+    #city-chart.wide-chart {
+      min-width: 800px;
+    }
+
+    @media (max-width: 480px) {
+      #overlay-header { padding: 12px 16px; }
+      #city-title { font-size: 16px; }
+      #overlay-close { width: 32px; height: 32px; }
+      #overlay-close svg { width: 16px; height: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="mainMap"></div>
+
+  <button id="map-reset" type="button" aria-label="返回全国视图">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M10 6H6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M6.5 10.5A7.5 7.5 0 1 0 12 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <span>返回全国</span>
+  </button>
+
+  <div id="overlay">
+    <div id="overlay-header">
+      <h3 id="city-title">城市图表</h3>
+      <button id="overlay-close" type="button" aria-label="关闭弹窗">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <div id="chart-container">
+      <div id="city-chart"></div>
+    </div>
+  </div>
+
+  <script>
+    const colorMap = {
+      Excellent: "#0b4f6c",
+      Good: "#1f78b4",
+      Mild: "#6baed6",
+      Moderate: "#b2df8a",
+      Heavy: "#feb24c",
+      Severe: "#f03b20",
+      Default: "#cccccc"
+    };
+
+    const levelTextMap = {
+      Excellent: "优",
+      Good: "良",
+      Mild: "轻度污染",
+      Moderate: "中度污染",
+      Heavy: "重度污染",
+      Severe: "严重污染"
+    };
+
+    const MONTH_NAMES = ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
+
+    const provinceFullNameMap = {
+      "北京": "北京市",
+      "天津": "天津市",
+      "上海": "上海市",
+      "重庆": "重庆市",
+      "河北": "河北省",
+      "山西": "山西省",
+      "辽宁": "辽宁省",
+      "吉林": "吉林省",
+      "黑龙江": "黑龙江省",
+      "江苏": "江苏省",
+      "浙江": "浙江省",
+      "安徽": "安徽省",
+      "福建": "福建省",
+      "江西": "江西省",
+      "山东": "山东省",
+      "河南": "河南省",
+      "湖北": "湖北省",
+      "湖南": "湖南省",
+      "广东": "广东省",
+      "海南": "海南省",
+      "四川": "四川省",
+      "贵州": "贵州省",
+      "云南": "云南省",
+      "陕西": "陕西省",
+      "甘肃": "甘肃省",
+      "青海": "青海省",
+      "内蒙古": "内蒙古自治区",
+      "广西": "广西壮族自治区",
+      "西藏": "西藏自治区",
+      "宁夏": "宁夏回族自治区",
+      "新疆": "新疆维吾尔自治区",
+      "香港": "香港特别行政区",
+      "澳门": "澳门特别行政区",
+      "台湾": "台湾省"
+    };
+
+    function formatProvinceFullName(shortName) {
+      return provinceFullNameMap[shortName] || shortName;
+    }
+
+    function generate2024Dates() {
+      const dates = [];
+      const start = new Date(2024, 0, 1);
+      const end = new Date(2024, 11, 31);
+      for (let dt = new Date(start); dt <= end; dt.setDate(dt.getDate() + 1)) {
+        const y = dt.getFullYear();
+        const m = String(dt.getMonth() + 1).padStart(2, "0");
+        const d = String(dt.getDate()).padStart(2, "0");
+        dates.push(`${y}-${m}-${d}`);
+      }
+      return dates;
+    }
+
+    const allDates = generate2024Dates();
+
+    const mapChart = echarts.init(document.getElementById("mainMap"));
+
+    let cityChart = echarts.init(document.getElementById("city-chart"), null, { renderer: "svg" });
+    const chartContainer = document.getElementById("chart-container");
+    const cityChartEl = document.getElementById("city-chart");
+
+    function recreateCityChart() {
+      try { if (cityChart) cityChart.dispose(); } catch (_) {}
+      cityChart = echarts.init(document.getElementById("city-chart"), null, { renderer: "svg" });
+    }
+
+    let rawData = {};
+    let inShanxiView = false;
+    let selectedProvince = null;
+
+    const resetBtn = document.getElementById("map-reset");
+    const overlayEl = document.getElementById("overlay");
+    const titleEl = document.getElementById("city-title");
+
+    function showResetBtn() { resetBtn.style.display = "inline-flex"; }
+    function hideResetBtn() { resetBtn.style.display = "none"; }
+
+    async function loadAQIData() {
+      try {
+        const resp = await fetch("/data/aqi.json", { cache: "no-cache" });
+        if (!resp.ok) throw new Error("AQI 数据加载失败");
+        rawData = await resp.json();
+      } catch (err) {
+        rawData = {};
+        console.error(err);
+      }
+    }
+
+    async function showTaiyuanCircle() {
+      titleEl.innerText = "太原：2024年空气质量";
+      chartContainer.classList.remove("scrollable");
+      cityChartEl.classList.remove("wide-chart");
+      
+      try {
+        const resp = await fetch("/data/weather.json", { cache: "no-cache" });
+        if (!resp.ok) throw new Error("无法加载 /data/weather.json");
+        const data = await resp.json();
+
+        if (!Array.isArray(data) || data.length === 0) {
+          cityChart.clear();
+          titleEl.innerText = "太原：没有可用数据";
+          return;
+        }
+
+        const dates = data.map(d => d.date);
+        let maxPM25 = 0;
+        for (const d of data) if (typeof d.pm25 === "number" && d.pm25 > maxPM25) maxPM25 = d.pm25;
+
+        const PM_CEILING = maxPM25 * 1.1;
+        const GAP_HEIGHT = PM_CEILING * 0.05;
+        const RING_HEIGHT = PM_CEILING * 0.12;
+
+        const layer1_InverseFiller = data.map(d => ({
+          value: PM_CEILING - d.pm25,
+          itemStyle: { color: "transparent" },
+          silent: true,
+          original: d
+        }));
+
+        const layer2_PM25 = data.map(d => ({
+          value: d.pm25,
+          itemStyle: { color: "#b8b8b8" },
+          original: d
+        }));
+
+        const layer3_Gap = data.map(() => ({ value: GAP_HEIGHT, itemStyle: { color: "transparent" }, silent: true }));
+
+        const layer4_Mean = data.map(d => ({
+          value: RING_HEIGHT,
+          itemStyle: { color: colorMap[d.level_mean] || colorMap.Default },
+          original: d
+        }));
+
+        const layer5_Gap = data.map(() => ({ value: GAP_HEIGHT, itemStyle: { color: "transparent" }, silent: true }));
+
+        const layer6_Max = data.map(d => ({
+          value: RING_HEIGHT,
+          itemStyle: { color: colorMap[d.level_max] || colorMap.Default },
+          original: d
+        }));
+
+        const monthRanges = [];
+        let currentMonth = -1;
+        data.forEach((d, index) => {
+          const m = new Date(d.date).getMonth();
+          if (m !== currentMonth) {
+            if (currentMonth !== -1) monthRanges[monthRanges.length - 1].end = index - 1;
+            monthRanges.push({ monthIndex: m, start: index, end: index, name: MONTH_NAMES[m] });
+            currentMonth = m;
+          } else {
+            monthRanges[monthRanges.length - 1].end = index;
+          }
+        });
+
+        const totalDays = dates.length;
+        const anglePerDay = 360 / totalDays;
+
+        const option = {
+          backgroundColor: "#f6f1e1",
+          animation: true,
+          animationDuration: 900,
+          animationEasing: "cubicOut",
+          title: {
+            text: "{main|2024}\n{sub|TAIYUAN}",
+            left: "center",
+            top: "center",
+            textStyle: {
+              rich: {
+                main: { fontSize: 20, color: "#666", padding: [0, 0, 8, 0] },
+                sub: { fontSize: 32, fontWeight: "900", color: "#333" }
+              }
+            }
+          },
+          tooltip: {
+            trigger: "item",
+            formatter: params => {
+              const o = params.data && params.data.original;
+              if (!o) return "";
+              const meanText = levelTextMap[o.level_mean] || o.level_mean || "";
+              const maxText = levelTextMap[o.level_max] || o.level_max || "";
+              return `<b>${o.date}</b><br/>PM2.5：${o.pm25}<br/>平均等级：${meanText}<br/>最大等级：${maxText}`;
+            }
+          },
+          polar: { radius: ["20%", "80%"] },
+          angleAxis: {
+            type: "category",
+            data: dates,
+            startAngle: 90,
+            clockwise: true,
+            boundaryGap: false,
+            splitLine: { show: false },
+            axisLine: { show: false },
+            axisLabel: { show: false },
+            axisTick: { show: false }
+          },
+          radiusAxis: {
+            type: "value",
+            min: 0,
+            max: "dataMax",
+            axisLine: { show: false },
+            axisLabel: { show: false },
+            splitLine: { show: false },
+            axisTick: { show: false }
+          },
+          series: [
+            { type: "bar", stack: "a", coordinateSystem: "polar", data: layer1_InverseFiller, name: "基底" },
+            { type: "bar", stack: "a", coordinateSystem: "polar", data: layer2_PM25, name: "PM2.5" },
+            { type: "bar", stack: "a", coordinateSystem: "polar", data: layer3_Gap },
+            { type: "bar", stack: "a", coordinateSystem: "polar", data: layer4_Mean, name: "均值圈" },
+            { type: "bar", stack: "a", coordinateSystem: "polar", data: layer5_Gap },
+            { type: "bar", stack: "a", coordinateSystem: "polar", data: layer6_Max, name: "最大值圈" },
+            {
+              type: "custom",
+              coordinateSystem: "polar",
+              data: monthRanges,
+              renderItem: function (params) {
+                const item = monthRanges[params.dataIndex];
+                const startIdx = item.start;
+                const endIdx = item.end;
+
+                const startAngleDeg = 90 - startIdx * anglePerDay;
+                const endAngleDeg = 90 - endIdx * anglePerDay;
+                const startAngle = startAngleDeg * Math.PI / 180;
+                const endAngle = endAngleDeg * Math.PI / 180;
+
+                const cx = params.coordSys.cx;
+                const cy = params.coordSys.cy;
+                const r0 = params.coordSys.r;
+
+                const braceRadius = r0 + 10;
+                const lineLen = 3;
+                const innerTick = braceRadius - lineLen;
+                const outerTick = braceRadius + lineLen;
+                const textRadius = braceRadius + 30;
+
+                const mid = (startAngle + endAngle) / 2;
+                const cosMid = Math.cos(-mid);
+                const sinMid = Math.sin(-mid);
+                const textPosX = cx + cosMid * textRadius;
+                const textPosY = cy + sinMid * textRadius;
+
+                const startCos = Math.cos(-startAngle);
+                const startSin = Math.sin(-startAngle);
+                const endCos = Math.cos(-endAngle);
+                const endSin = Math.sin(-endAngle);
+
+                return {
+                  type: "group",
+                  children: [
+                    {
+                      type: "arc",
+                      shape: { cx, cy, r: braceRadius, startAngle: -endAngle, endAngle: -startAngle, clockwise: false },
+                      style: { stroke: "#555", fill: "none", lineWidth: 1 }
+                    },
+                    {
+                      type: "line",
+                      shape: {
+                        x1: cx + innerTick * startCos,
+                        y1: cy + innerTick * startSin,
+                        x2: cx + outerTick * startCos,
+                        y2: cy + outerTick * startSin
+                      },
+                      style: { stroke: "#555", lineWidth: 1 }
+                    },
+                    {
+                      type: "line",
+                      shape: {
+                        x1: cx + innerTick * endCos,
+                        y1: cy + innerTick * endSin,
+                        x2: cx + outerTick * endCos,
+                        y2: cy + outerTick * endSin
+                      },
+                      style: { stroke: "#555", lineWidth: 1 }
+                    },
+                    {
+                      type: "text",
+                      style: {
+                        text: item.name,
+                        fill: "#333",
+                        font: "bold 13px Microsoft YaHei",
+                        textAlign: "center",
+                        textVerticalAlign: "middle"
+                      },
+                      position: [textPosX, textPosY]
+                    }
+                  ]
+                };
+              }
+            }
+          ]
+        };
+
+        cityChart.setOption(option, true);
+        setTimeout(() => cityChart.resize(), 100);
+      } catch (e) {
+        console.error(e);
+        titleEl.innerText = "太原：加载数据失败";
+        cityChart.clear();
+      }
+    }
+
+    function showCityChart(cityName) {
+      if (!rawData || !rawData[cityName]) {
+        titleEl.innerText = cityName + "：暂无该城市的详细数据";
+        cityChart.clear();
+        return;
+      }
+
+      chartContainer.classList.add("scrollable");
+      cityChartEl.classList.add("wide-chart");
+      cityChart.resize();
+
+      const seriesData = rawData[cityName];
+      titleEl.innerText = cityName + "：2024年AQI变化";
+
+      const optionCity = {
+        animation: true,
+        animationDuration: 900,
+        animationEasing: "cubicOut",
+        tooltip: { trigger: "axis" },
+        grid: {
+          left: 50,
+          right: 30,
+          top: 80,
+          bottom: 70,
+          containLabel: false
+        },
+        xAxis: {
+          type: "category",
+          data: allDates,
+          axisLabel: {
+            interval: (idx, val) => val.endsWith("-01"),
+            formatter: value => {
+              const d = new Date(value);
+              return (d.getMonth() + 1) + "月";
+            },
+            color: "#666",
+            fontSize: 12,
+            margin: 14
+          },
+          axisLine: { lineStyle: { color: "#ddd" } },
+          axisTick: { show: false }
+        },
+        yAxis: {
+          type: "value",
+          name: "AQI",
+          nameGap: 18,
+          axisLabel: { color: "#666" },
+          splitLine: { lineStyle: { color: "#f0f0f0" } }
+        },
+        series: [{
+          name: cityName,
+          type: "line",
+          data: seriesData,
+          smooth: true,
+          showSymbol: false,
+          areaStyle: { opacity: 0.15 },
+          lineStyle: { width: 2, color: "#1f78b4" }
+        }]
+      };
+
+      cityChart.setOption(optionCity, true);
+    }
+
+    const carbonData2013 = [
+      { name: "北京", value: 86.695 },
+      { name: "天津", value: 151.032 },
+      { name: "河北", value: 657.720 },
+      { name: "山西", value: 1499.063 },
+      { name: "内蒙古", value: 783.743 },
+      { name: "辽宁", value: 529.863 },
+      { name: "吉林", value: 237.289 },
+      { name: "黑龙江", value: 363.482 },
+      { name: "上海", value: 181.783 },
+      { name: "江苏", value: 638.441 },
+      { name: "浙江", value: 387.561 },
+      { name: "安徽", value: 387.180 },
+      { name: "福建", value: 203.571 },
+      { name: "江西", value: 162.189 },
+      { name: "山东", value: 944.494 },
+      { name: "河南", value: 594.416 },
+      { name: "湖北", value: 252.921 },
+      { name: "湖南", value: 266.327 },
+      { name: "广东", value: 493.088 },
+      { name: "广西", value: 189.775 },
+      { name: "海南", value: 51.966 },
+      { name: "重庆", value: 134.280 },
+      { name: "四川", value: 277.508 },
+      { name: "贵州", value: 314.246 },
+      { name: "云南", value: 195.781 },
+      { name: "陕西", value: 482.836 },
+      { name: "甘肃", value: 181.466 },
+      { name: "青海", value: 70.835 },
+      { name: "宁夏", value: 187.756 },
+      { name: "新疆", value: 336.337 }
+    ];
+
+    const shanxiCities = [
+      { name: "太原", value: [112.549, 37.870] },
+      { name: "大同", value: [113.612, 40.040] },
+      { name: "朔州", value: [112.433, 39.331] },
+      { name: "忻州", value: [112.733, 38.417] },
+      { name: "阳泉", value: [113.577, 37.860] },
+      { name: "吕梁", value: [111.144, 37.518] },
+      { name: "晋中", value: [112.752, 37.688] },
+      { name: "长治", value: [113.116, 36.195] },
+      { name: "晋城", value: [112.851, 35.498] },
+      { name: "临汾", value: [111.520, 36.088] },
+      { name: "运城", value: [111.006, 35.038] }
+    ];
+
+    const labelSelectedStyle = {
+      show: true,
+      fontSize: 16,
+      fontWeight: 700,
+      color: "#111",
+      formatter: p => formatProvinceFullName(p.name)
+    };
+
+    function getMapTitleOption() {
+      const isMobile = window.innerWidth < 600;
+      return {
+        text: "2013年中国各省碳排放总量",
+        subtext: "单位：Mt（百万吨）｜点击省份可放大查看\n点击“山西”查看城市并进入空气质量图表",
+        left: "center",
+        top: isMobile ? 10 : 14,
+        textStyle: {
+          fontSize: isMobile ? 16 : 20,
+          fontWeight: 900,
+          letterSpacing: 1,
+          color: "#1f2d3d",
+          textBorderColor: "rgba(255,255,255,0.65)",
+          textBorderWidth: 4,
+          textShadowColor: "rgba(0,0,0,0.12)",
+          textShadowBlur: 10,
+          textShadowOffsetX: 0,
+          textShadowOffsetY: 4
+        },
+        subtextStyle: {
+          fontSize: isMobile ? 10 : 12,
+          color: "#5b6b7a",
+          lineHeight: isMobile ? 14 : 18
+        },
+        padding: isMobile ? [8, 10] : [10, 16],
+        backgroundColor: "rgba(255,255,255,0.88)",
+        borderRadius: 12,
+        borderColor: "rgba(0,0,0,0.08)",
+        borderWidth: 1
+      };
+    }
+
+    const optionChina = {
+      animation: true,
+      animationDurationUpdate: 600,
+      animationEasingUpdate: "cubicInOut",
+      title: getMapTitleOption(),
+      tooltip: {
+        trigger: "item",
+        formatter: function (params) {
+          const v = params.value;
+          if (v == null || isNaN(v)) return formatProvinceFullName(params.name || "");
+          return formatProvinceFullName(params.name) + "<br/>碳排放：<b>" + Number(v).toFixed(1) + "</b> Mt";
+        }
+      },
+      visualMap: {
+        min: 50,
+        max: 1500,
+        left: "left",
+        bottom: 20,
+        text: ["高碳排放", "低碳排放"],
+        calculable: true,
+        inRange: { color: ["#e0f3ff", "#0050a0"] },
+        itemWidth: 10,
+        itemHeight: 90,
+        textStyle: { fontSize: 10 }
+      },
+      geo: {
+        map: "china",
+        roam: true,
+        center: [104, 35],
+        zoom: 1.2,
+        label: { show: false },
+        itemStyle: { borderColor: "#999" },
+        emphasis: {
+          label: { show: false },
+          itemStyle: { areaColor: "#ffd54f" }
+        },
+        regions: [{ name: "山西", itemStyle: { areaColor: "#ffe0b2" } }]
+      },
+      series: [
+        {
+          name: "2013年碳排放总量",
+          type: "map",
+          map: "china",
+          geoIndex: 0,
+          selectedMode: "single",
+          data: carbonData2013,
+          label: { show: false },
+          emphasis: { label: labelSelectedStyle },
+          select: { label: labelSelectedStyle }
+        },
+        {
+          name: "山西城市",
+          type: "scatter",
+          coordinateSystem: "geo",
+          data: [],
+          symbol: "circle",
+          symbolSize: function (val, params) {
+            return params.name === "太原" ? 18 : 12;
+          },
+          itemStyle: {
+            color: function (params) {
+              return params.name === "太原" ? "#ffd666" : "transparent";
+            },
+            borderColor: function (params) {
+              return params.name === "太原" ? "#c47f00" : "#ff7f50";
+            },
+            borderWidth: function (params) {
+              return params.name === "太原" ? 4 : 2;
+            },
+            shadowColor: function (params) {
+              return params.name === "太原" ? "rgba(196,127,0,0.35)" : "rgba(0,0,0,0.18)";
+            },
+            shadowBlur: function (params) {
+              return params.name === "太原" ? 10 : 6;
+            }
+          },
+          label: {
+            show: true,
+            formatter: "{b}",
+            position: "right",
+            offset: [6, 6],
+            color: "#1f2d3d",
+            fontSize: 12,
+            fontWeight: 600,
+            backgroundColor: "rgba(255,255,255,0.8)",
+            padding: [2, 4],
+            borderRadius: 4,
+            borderColor: "#dfe3e8",
+            borderWidth: 1
+          }
+        }
+      ]
+    };
+
+    mapChart.setOption(optionChina);
+
+    function enterShanxiView() {
+      inShanxiView = true;
+      mapChart.setOption({
+        geo: { center: [112.5, 37.5], zoom: 5 },
+        series: [{}, { data: shanxiCities }]
+      }, false);
+    }
+
+    function backToChina() {
+      inShanxiView = false;
+      mapChart.setOption({
+        geo: { center: [104, 35], zoom: 1.2 },
+        series: [{}, { data: [] }]
+      }, false);
+    }
+
+    function clearProvinceSelectionAndReset() {
+      if (selectedProvince) {
+        mapChart.dispatchAction({ type: "unselect", seriesIndex: 0, name: selectedProvince });
+      }
+      selectedProvince = null;
+      hideResetBtn();
+      backToChina();
+    }
+
+    function openOverlay() {
+      overlayEl.style.display = "flex";
+      recreateCityChart();
+      if(cityChart) cityChart.resize();
+    }
+
+    function closeOverlay() {
+      overlayEl.style.display = "none";
+      if (cityChart) cityChart.clear();
+    }
+
+    document.getElementById("overlay-close").addEventListener("click", closeOverlay);
+
+    resetBtn.addEventListener("click", clearProvinceSelectionAndReset);
+
+    mapChart.on("click", function (params) {
+      if (params.seriesType === "map" && params.name) {
+        if (selectedProvince && selectedProvince !== params.name) {
+          mapChart.dispatchAction({ type: "unselect", seriesIndex: 0, name: selectedProvince });
+        }
+
+        if (params.name === "山西") {
+          selectedProvince = "山西";
+          showResetBtn();
+          mapChart.dispatchAction({ type: "select", seriesIndex: 0, name: "山西" });
+          enterShanxiView();
+          return;
+        }
+
+        inShanxiView = false;
+        mapChart.setOption({ series: [{}, { data: [] }] }, false);
+
+        if (params.event && params.event.offsetX != null) {
+          const geoCoord = mapChart.convertFromPixel({ geoIndex: 0 }, [params.event.offsetX, params.event.offsetY]);
+          if (geoCoord) {
+            mapChart.setOption({ geo: { center: geoCoord, zoom: 2.3 } }, false);
+          } else {
+            mapChart.setOption({ geo: { zoom: 2.3 } }, false);
+          }
+        } else {
+          mapChart.setOption({ geo: { zoom: 2.3 } }, false);
+        }
+
+        selectedProvince = params.name;
+        showResetBtn();
+        mapChart.dispatchAction({ type: "select", seriesIndex: 0, name: params.name });
+        return;
+      }
+
+      if (inShanxiView && params.seriesType === "scatter") {
+        const cityName = params.name;
+        openOverlay();
+        if (cityName === "太原") showTaiyuanCircle();
+        else showCityChart(cityName);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      mapChart.resize();
+      mapChart.setOption({ title: getMapTitleOption() });
+      if (cityChart) cityChart.resize();
+    });
+
+    (async function init() {
+      await loadAQIData();
+    })();
+  </script>
+</body>
+</html>

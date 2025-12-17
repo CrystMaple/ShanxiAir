@@ -34,6 +34,8 @@
             box-shadow: 0 2px 12px rgba(0,0,0,0.04);
             box-sizing: border-box;
             flex-shrink: 0;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         .page-title {
             font-size: 22px;
@@ -41,6 +43,7 @@
             color: var(--text-color);
             margin: 0;
             letter-spacing: 0.5px;
+            white-space: nowrap;
         }
         .controls {
             display: flex;
@@ -48,6 +51,7 @@
             padding: 4px;
             border-radius: 6px;
             border: 1px solid #e0e4e8;
+            flex-shrink: 0;
         }
         .tab-btn {
             border: none;
@@ -59,6 +63,7 @@
             transition: all 0.2s ease;
             border-radius: 4px;
             font-weight: 500;
+            white-space: nowrap;
         }
         .tab-btn.active {
             background-color: #fff;
@@ -85,6 +90,19 @@
             min-width: 1000px;
             flex-grow: 1;
             height: 100%;
+        }
+        @media (max-width: 768px) {
+            .header-bar {
+                justify-content: center;
+                padding: 10px;
+            }
+            .page-title {
+                font-size: 18px;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 5px;
+                white-space: normal;
+            }
         }
     </style>
 </head>
@@ -300,7 +318,7 @@
         async function init() {
             myChart.showLoading({ text: '正在加载...', color: '#57c5c7' });
             try {
-                const response = await fetch('./aqi-data.json');
+                const response = await fetch('/data/aqi.json');
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 rawData = await response.json();
                 myChart.hideLoading();

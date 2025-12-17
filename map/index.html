@@ -55,7 +55,7 @@
     #overlay {
       position: fixed;
       inset: 0;
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(6px);
       display: none;
       flex-direction: column;
@@ -69,6 +69,7 @@
       background: #ffffff;
       box-shadow: 0 2px 12px rgba(0,0,0,0.06);
       flex-shrink: 0;
+      z-index: 21;
     }
     #city-title {
       margin: 0;
@@ -103,13 +104,15 @@
     #overlay-close:active { transform: translateY(0px) scale(0.98); }
     #overlay-close svg { width: 18px; height: 18px; }
 
+    /* 图表容器：用于处理滚动 */
     #chart-container {
       flex: 1;
       width: 100%;
       position: relative;
-      overflow: hidden;
+      overflow: hidden; /* 默认隐藏 */
     }
     
+    /* 当需要滚动时添加此累 */
     #chart-container.scrollable {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
@@ -120,6 +123,7 @@
       width: 100%; 
     }
     
+    /* 强制宽度，确保在移动端有足够空间显示标签 */
     #city-chart.wide-chart {
       min-width: 800px;
     }
@@ -270,6 +274,7 @@
 
     async function showTaiyuanCircle() {
       titleEl.innerText = "太原：2024年空气质量";
+      // 太原圆环图不需要横向滚动
       chartContainer.classList.remove("scrollable");
       cityChartEl.classList.remove("wide-chart");
       
@@ -336,6 +341,11 @@
 
         const totalDays = dates.length;
         const anglePerDay = 360 / totalDays;
+        
+        // 动态调整字体大小
+        const isMobile = window.innerWidth < 600;
+        const mainFontSize = isMobile ? 16 : 20;
+        const subFontSize = isMobile ? 24 : 36;
 
         const option = {
           backgroundColor: "#f6f1e1",
@@ -343,13 +353,13 @@
           animationDuration: 900,
           animationEasing: "cubicOut",
           title: {
-            text: "{main|2024}\n{sub|TAIYUAN}",
+            text: "{main|THE QUALITY OF 2024}\n{sub|TAIYUAN AIR}",
             left: "center",
             top: "center",
             textStyle: {
               rich: {
-                main: { fontSize: 20, color: "#666", padding: [0, 0, 8, 0] },
-                sub: { fontSize: 32, fontWeight: "900", color: "#333" }
+                main: { fontSize: mainFontSize, color: "#666", padding: [0, 0, 8, 0] },
+                sub: { fontSize: subFontSize, fontWeight: "900", color: "#333" }
               }
             }
           },
@@ -488,6 +498,7 @@
         return;
       }
 
+      // 启用横向滚动
       chartContainer.classList.add("scrollable");
       cityChartEl.classList.add("wide-chart");
       cityChart.resize();
@@ -511,7 +522,9 @@
           type: "category",
           data: allDates,
           axisLabel: {
+            // 关键修改：仅显示每月1号，确保稀疏度
             interval: (idx, val) => val.endsWith("-01"),
+            hideOverlap: true, // 防止重叠
             formatter: value => {
               const d = new Date(value);
               return (d.getMonth() + 1) + "月";
@@ -803,6 +816,10 @@
 
       if (inShanxiView && params.seriesType === "scatter") {
         const cityName = params.name;
+        
+        // 关键修复：点击城市时，强制隐藏地图上的 tooltip，防止其遮挡新弹窗
+        mapChart.dispatchAction({ type: 'hideTip' });
+        
         openOverlay();
         if (cityName === "太原") showTaiyuanCircle();
         else showCityChart(cityName);
